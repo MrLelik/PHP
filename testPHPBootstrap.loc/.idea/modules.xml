@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Bootstrap.loc/.idea/Bootstrap.loc.iml" filepath="$PROJECT_DIR$/../Bootstrap.loc/.idea/Bootstrap.loc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PHPtask.loc.iml" filepath="$PROJECT_DIR$/.idea/PHPtask.loc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../localhost/.idea/localhost.iml" filepath="$PROJECT_DIR$/../localhost/.idea/localhost.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../test.loc/.idea/test.loc.iml" filepath="$PROJECT_DIR$/../test.loc/.idea/test.loc.iml" />
+    </modules>
+  </component>
+</project>
