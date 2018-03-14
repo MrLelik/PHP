@@ -1,24 +1,29 @@
 <?php
 
-echo "Hello world";
+class Message
+{
+    var $text;
+    var $subject;
+    var $to;
 
-$varNum = 55;
-$varStr = '77';
+    function load_text($filename)
+    {
+        $this->text = join('',file($filename));
+    }
 
-echo "<br/>";
+    function send()
+    {
+        echo $this->to;
+        echo $this->subject;
+        echo $this->text;
+//        mail($this->to, $this->subject, $this->text);
+    }
+}
 
-var_dump($varNum);
-echo "<br/>";
-var_dump($varStr);
-echo "<br/>";
+$mes = new Message;
 
+$mes->to = 'user@server.ua';
+$mes->subject = 'Hi';
+$mes->load_text('message.txt');
 
-$null = 0;
-$notNull = 'Я не ноль';
-var_dump($null == $notNull);
-
-echo "<br/>";
-
-var_dump($null);
-echo "<br/>";
-var_dump($notNull);
+$mes->send();
