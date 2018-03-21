@@ -21,6 +21,11 @@ class Message
         $this->text = join('',file($filename));
     }
 
+    public static function sayHi()
+    {
+        echo 'Hi my function sayHi';
+    }
+
     public function send()
     {
         echo $this->to . '<br>';
@@ -45,6 +50,8 @@ $mes = new Message('user@server.ua', 'Hi', 'message.txt');
 //$mes->load_text('message.txt');
 
 $mes->send();
+
+Message::sayHi();
 
 // Тест Массива.
 $food = [
