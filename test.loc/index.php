@@ -12,29 +12,37 @@
 
 class Message
 {
-    var $text;
-    var $subject;
-    var $to;
+    public $text;
+    public $subject;
+    public $to;
 
-    function load_text($filename)
+    public function load_text($filename)
     {
         $this->text = join('',file($filename));
     }
 
-    function send()
+    public function send()
     {
         echo $this->to . '<br>';
         echo $this->subject . '<br>';
         echo $this->text . '<br>';
 //        mail($this->to, $this->subject, $this->text);
     }
+
+    public function __construct($to, $subject, $text)
+    {
+        $this->to = $to;
+        $this->subject = $subject;
+        $this->text = $text;
+        $this->load_text($this->text);
+    }
 }
 
-$mes = new Message;
+$mes = new Message('user@server.ua', 'Hi', 'message.txt');
 
-$mes->to = 'user@server.ua';
-$mes->subject = 'Hi';
-$mes->load_text('message.txt');
+//$mes->to = 'user@server.ua';
+//$mes->subject = 'Hi';
+//$mes->load_text('message.txt');
 
 $mes->send();
 
