@@ -1,5 +1,4 @@
 <?php
-//echo '<pre>';
 
 function insertBr()
 {
@@ -9,8 +8,9 @@ function insertBr()
 //1. Объявите переменные типов: Число,
 // число с плавающей точкой, строка,
 // булево значение, нул, массив.
-echo 'Задание 1';
+echo '<b>' . 'Задание 1' . '</b>';
 insertBr();
+
 
 $num = 7;
 $float = 7.7;
@@ -31,27 +31,32 @@ foreach ($allVar as $key => $value) {
 // Создайте переменную $age,
 // и присвойте ей числовое значение содержащее ваш возраст.
 insertBr();
-echo 'Задание 2';
+echo '<b>' . 'Задание 2' . '</b>';
 insertBr();
+
 
 $name = 'lelik';
 $age = 28;
 echo $name .'<br>'. $age;
+
 
 //3. Выведите с помощью echo (print, var_dump)
 // фразу “Меня зовут …..”,
 // выведите фразу “Мой возраст … лет”.
 // Измените код таким образом чтоб каждая фраза была с новой строки.
 insertBr();
-echo 'Задание 3';
+echo '<b>' . 'Задание 3' . '</b>';
 insertBr();
+
 
 echo "Меня зовут $name" . '<br>' . "Мой возраст $age лет";
 
+
 //4. Удалите переменную $age
 insertBr();
-echo 'Задание 4';
+echo '<b>' . 'Задание 4' . '</b>';
 insertBr();
+
 
 unset($age);
 
@@ -59,14 +64,17 @@ if (!$age) {
     echo 'Переменная age не существует';
 }
 
+
 //5. Создайте константу и присвойте ей
 // любое значение, выведите ее на экран.
 insertBr();
-echo 'Задание 5';
+echo '<b>' . 'Задание 5' . '</b>';
 insertBr();
+
 
 define("CONSTANT", "Константа");
 echo CONSTANT;
+
 
 //6. Создайте переменную $age
 // и присвойте ей произвольное число,
@@ -83,8 +91,9 @@ echo CONSTANT;
 // если значение переменной $age
 // не попадает ни в один диапазон.
 insertBr();
-echo 'Задание 6';
+echo '<b>' . 'Задание 6' . '</b>';
 insertBr();
+
 
 $age = rand(1, 100);
 echo $age . '<br>';
@@ -99,6 +108,7 @@ if ($age >= 18 && $age <= 59) {
     echo 'Неизвестный возраст';
 }
 
+
 //7. Создайте переменную $day,
 // присвойте ей любое числовое значение.
 // С помощью конструкции switch выведите фразу
@@ -110,8 +120,39 @@ if ($age >= 18 && $age <= 59) {
 // если значение $day не попадает в диапазон
 // чисел от 1 до 7 включительно.
 insertBr();
-echo 'Задание 7';
+echo '<b>' . 'Задание 7' . '</b>';
 insertBr();
+
+
+$day = rand(1, 10);
+echo $day . '<br>';
+
+switch ($day) {
+    case 1:
+        echo 'Это рабочий день';
+        break;
+    case 2:
+        echo 'Это рабочий день';
+        break;
+    case 3:
+        echo 'Это рабочий день';
+        break;
+    case 4:
+        echo 'Это рабочий день';
+        break;
+    case 5:
+        echo 'Это рабочий день';
+        break;
+    case 6:
+        echo 'Это выходной день';
+        break;
+    case 7:
+        echo 'Это выходной день';
+        break;
+    default:
+        echo 'Неизвестный день';
+        break;
+}
 
 
 //8. Создайте массив $bmw с ячейками
@@ -124,15 +165,61 @@ insertBr();
 //Выведите значение всех трех массивов в виде:
 //name - model - speed - doors - year
 insertBr();
-echo 'Задание 8';
+echo '<b>' . 'Задание 8' . '</b>';
 insertBr();
 
+
+$cars = [
+    "bmv" => [
+        "model" => "X5",
+        "speed" => 120,
+        "doors" => 5,
+        "year" => 2006
+    ],
+    "toyota" => [
+        "model" => "Carina",
+        "speed" => 130,
+        "doors" => 4,
+        "year" => 2007
+    ],
+    "opel" => [
+        "model" => "Corsa",
+        "speed" => 140,
+        "doors" => 5,
+        "year" => 2007
+    ]
+];
+
+foreach ($cars as $brands => $massiv) {
+    echo 'name ' . '<b>' . strtoupper($brands) . '</b>';
+    insertBr();
+    foreach ($massiv as $innerKey => $value) {
+        echo $innerKey . ': ' . $value . ' ' ;
+        insertBr();
+    }
+}
 //9. Используя цикл for выведите все нечетные числа от 1 до 50.
 insertBr();
-echo 'Задание 9';
+echo '<b>' . 'Задание 9' . '</b>';
 insertBr();
+
+
+for ($i = 0; $i <= 50; $i++) {
+    if ($i % 2 != 0) {
+        echo $i . ' ';
+    }
+}
+
 
 //10. Используя цикл for заполните массив от 0 до 100
 insertBr();
-echo 'Задание 10';
+echo '<b>' . 'Задание 10' . '</b>';
 insertBr();
+
+
+$arrNumbers = [];
+
+for ($i = 0; $i <= 100; $i++) {
+    $arrNumbers[] = $i;
+}
+print_r($arrNumbers);
