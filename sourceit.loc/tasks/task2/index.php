@@ -107,4 +107,4 @@ function fib($n)
     return $result;
 }
 echo '<pre>';
-print_r(fib(10));
+print_r(fib(5));
