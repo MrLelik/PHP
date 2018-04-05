@@ -83,7 +83,7 @@ function maxNumInArr($arr)
 $arrNumbers = [];
 
 for ($i = 0; $i <= 10; $i++) {
-    $arrNumbers[] = random_int(0, 20);
+    $arrNumbers[$i] = random_int(0, 20);
 }
 print_r($arrNumbers);
 insertBr();
