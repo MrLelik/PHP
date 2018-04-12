@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e3c5629-4329-4c87-8b00-1a435bf887dc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite.loc/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mysite.loc/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.loc/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.loc/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sourceit.loc/tasks/task3/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/sourceit.loc/tasks/task3/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.loc/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="702">
-              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+              <caret line="27" column="17" lean-forward="true" selection-start-line="4" selection-end-line="27" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -41,8 +39,17 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite.loc/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="658">
-              <caret line="216" column="36" selection-start-line="216" selection-start-column="24" selection-end-line="216" selection-end-column="36" />
+            <state relative-caret-position="416">
+              <caret line="16" column="11" lean-forward="true" selection-end-line="242" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sourceit.loc/tasks/task3/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="840">
+              <caret line="241" column="4" lean-forward="true" selection-start-line="241" selection-start-column="4" selection-end-line="241" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -66,8 +73,9 @@
         <option value="$PROJECT_DIR$/sourceit.loc/index.php" />
         <option value="$PROJECT_DIR$/test.loc/function.php" />
         <option value="$PROJECT_DIR$/testPHPandMySQL.loc/index.php" />
-        <option value="$PROJECT_DIR$/mysite.loc/index.php" />
         <option value="$PROJECT_DIR$/test.loc/index.php" />
+        <option value="$PROJECT_DIR$/mysite.loc/index.php" />
+        <option value="$PROJECT_DIR$/sourceit.loc/tasks/task3/index.php" />
       </list>
     </option>
   </component>
@@ -102,6 +110,24 @@
               <item name="server" type="b2602c69:ProjectViewProjectNode" />
               <item name="server" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="mysite.loc" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sourceit.loc" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sourceit.loc" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="tasks" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sourceit.loc" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="tasks" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="task3" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="server" type="b2602c69:ProjectViewProjectNode" />
@@ -186,12 +212,12 @@
       <workItem from="1523391384690" duration="8095000" />
       <workItem from="1523472720692" duration="13431000" />
       <workItem from="1523490204579" duration="235000" />
-      <workItem from="1523528573639" duration="4046000" />
+      <workItem from="1523528573639" duration="4455000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98462000" />
+    <option name="totallyTimeSpent" value="98871000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -234,13 +260,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mysite.loc/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite.loc/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -563,17 +582,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite.loc/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="216" column="36" selection-start-line="216" selection-start-column="24" selection-end-line="216" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.loc/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+          <caret line="27" column="17" lean-forward="true" selection-start-line="4" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite.loc/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="16" column="11" lean-forward="true" selection-end-line="242" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sourceit.loc/tasks/task3/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="241" column="4" lean-forward="true" selection-start-line="241" selection-start-column="4" selection-end-line="241" selection-end-column="4" />
         </state>
       </provider>
     </entry>

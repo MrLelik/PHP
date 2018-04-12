@@ -53,6 +53,7 @@ insertBr();
 function myTrim(&$str)
 {
     $i = 0;
+
     if ($str{0} == ' ') {
         $str{0} = '';
     }
@@ -63,6 +64,7 @@ function myTrim(&$str)
         }
         $i++;
     }
+
     return $str;
 }
 
@@ -94,6 +96,7 @@ function myIntval($val)
         }
         $i++;
     }
+
     return $num + 0;
 }
 
@@ -114,6 +117,7 @@ function myImplode($del = null ,$arr)
 {
     $str = null;
     $i = 0;
+
     foreach ($arr as $value) {
         if ($arr[$i + 1]) {
             $str .= $value . $del;
@@ -122,6 +126,7 @@ function myImplode($del = null ,$arr)
         }
         $i++;
     }
+
     return $str;
 }
 
@@ -161,6 +166,7 @@ function myExplode($del, $str)
         }
         $i++;
     }
+
     return $resultArr;
 }
 
@@ -189,7 +195,6 @@ function myArray_merge($arr1, $arr2)
         $count = 1;
 
         foreach ($resultArr as $key1 => $value1) {
-
             if ($newKey === $key1) {
                 $resultArr[$key1] = $arr2[$key2];
                 $flag = false;
@@ -199,6 +204,7 @@ function myArray_merge($arr1, $arr2)
             $count++;
         }
     }
+
     return $resultArr;
 }
 
@@ -228,10 +234,12 @@ function myArray_unique($arr)
                 $count++;
             }
         }
+
         if ($count == 0) {
             $resultArr[] = $value;
         }
     }
+    
     return $resultArr;
 }
 
