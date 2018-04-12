@@ -2,34 +2,27 @@
 
 require_once 'function.php';
 
-function myArray_merge($arr1, $arr2)
+function myArray_unique($arr)
 {
-    $resultArr = $arr1;
+    $resultArr = [];
 
-    foreach ($arr2 as $key2 => $value2) {
-        $newKey = $key2 . '';
-        $val = $value2;
-        $flag = true;
+    foreach ($arr as $value) {
         $count = 0;
-
-        foreach ($resultArr as $key1 => $value1) {
-
-            if ($newKey === $key1) {
-                $resultArr[$key1] = $arr2[$key2];
-                $flag = false;
-            } elseif ((count($resultArr) == ($count + 1)) && $flag) {
-                $resultArr[] = $val;
+        foreach ($resultArr as $item) {
+            if ($value == $item) {
+                $count++;
             }
-            $count++;
+        }
+        if ($count == 0) {
+            $resultArr[] = $value;
         }
     }
     return $resultArr;
 }
 
-$a = ['hello', 'my' => 'world'];
-$b = ['banana', 'kokos','my' => 'laim'];
 
-$result = myArray_merge($a, $b);
+$someArr = [3, 4, 5, 9, 10, 1, 3, 5, 3, 4, 9, 9];
 
+$result = myArray_unique($someArr);
 echo '<pre>';
 print_r($result);

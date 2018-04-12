@@ -4,9 +4,7 @@
     <list default="true" id="4e3c5629-4329-4c87-8b00-1a435bf887dc" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite.loc/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mysite.loc/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.loc/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.loc/function.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.loc/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.loc/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testPHPandMySQL.loc/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/testPHPandMySQL.loc/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,20 +29,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.loc/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="34" column="17" lean-forward="true" selection-start-line="4" selection-end-line="34" selection-end-column="17" />
+            <state relative-caret-position="702">
+              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite.loc/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="211" lean-forward="true" selection-start-line="211" selection-end-line="211" />
+            <state relative-caret-position="658">
+              <caret line="216" column="36" selection-start-line="216" selection-start-column="24" selection-end-line="216" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -68,8 +66,8 @@
         <option value="$PROJECT_DIR$/sourceit.loc/index.php" />
         <option value="$PROJECT_DIR$/test.loc/function.php" />
         <option value="$PROJECT_DIR$/testPHPandMySQL.loc/index.php" />
-        <option value="$PROJECT_DIR$/test.loc/index.php" />
         <option value="$PROJECT_DIR$/mysite.loc/index.php" />
+        <option value="$PROJECT_DIR$/test.loc/index.php" />
       </list>
     </option>
   </component>
@@ -93,7 +91,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -120,6 +117,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -188,11 +186,12 @@
       <workItem from="1523391384690" duration="8095000" />
       <workItem from="1523472720692" duration="13431000" />
       <workItem from="1523490204579" duration="235000" />
+      <workItem from="1523528573639" duration="4046000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94416000" />
+    <option name="totallyTimeSpent" value="98462000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -207,18 +206,18 @@
     <frame x="-1" y="26" width="1922" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49592668" visible="true" weight="0.14658849" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49592668" visible="true" weight="0.14818764" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info id="Favorites" order="2" sideWeight="0.5040733" side_tool="true" weight="0.1453125" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" sideWeight="0.5040733" side_tool="true" weight="0.1453125" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -564,17 +563,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.loc/index.php">
+    <entry file="file://$PROJECT_DIR$/mysite.loc/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="34" column="17" lean-forward="true" selection-start-line="4" selection-end-line="34" selection-end-column="17" />
+        <state relative-caret-position="658">
+          <caret line="216" column="36" selection-start-line="216" selection-start-column="24" selection-end-line="216" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite.loc/index.php">
+    <entry file="file://$PROJECT_DIR$/test.loc/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="211" lean-forward="true" selection-start-line="211" selection-end-line="211" />
+        <state relative-caret-position="702">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
         </state>
       </provider>
     </entry>
