@@ -15,9 +15,11 @@ insertBr();
 function myStrlen($str)
 {
     $i = 0;
+
     while ($str{$i}) {
         $i++;
     }
+    
     return $i;
 }
 
@@ -239,7 +241,7 @@ function myArray_unique($arr)
             $resultArr[] = $value;
         }
     }
-    
+
     return $resultArr;
 }
 
