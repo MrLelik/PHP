@@ -1,8 +1,5 @@
 <?php
 
-require_once 'function.php';
-
-
 function myRound($int)
 {
     $i = 0;

@@ -19,7 +19,7 @@ function myStrlen($str)
     while ($str{$i}) {
         $i++;
     }
-    
+
     return $i;
 }
 

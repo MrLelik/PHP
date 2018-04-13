@@ -29,10 +29,10 @@
                 <a class="btn btn-success" href="tasks/task2/index.php">Hometask 2</a>
             </div>
             <div class="buttons">
-                <a class="btn btn-success" href="#">Hometask 3</a>
+                <a class="btn btn-success" href="tasks/task3/index.php">Hometask 3</a>
             </div>
             <div class="buttons">
-                <a class="btn btn-success" href="#">Hometask 4</a>
+                <a class="btn btn-success" href="tasks/task4/index.php">Hometask 4</a>
             </div>
             <div class="buttons">
                 <a class="btn btn-success" href="#">Hometask 5</a>
