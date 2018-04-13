@@ -20,7 +20,7 @@ function myRound($int)
             if ($arr[$key + 1] >= 5) {
                 return $result + 1;
             } else {
-                return $result;
+                return $result + 0;
             }
         } else {
             $result .= $arr[$key];
