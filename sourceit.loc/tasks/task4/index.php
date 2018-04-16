@@ -3,7 +3,7 @@
 function myRound($int)
 {
     $i = 0;
-    $int .= '';
+    $int = (string) $int;
     $arr = [];
     $result = null;
 
@@ -15,9 +15,9 @@ function myRound($int)
     foreach ($arr as $key => $value) {
         if ($value == '.') {
             if ($arr[$key + 1] >= 5) {
-                return $result + 1;
+                return (int) ++$result;
             } else {
-                return $result + 0;
+                return (int) $result;
             }
         } else {
             $result .= $arr[$key];
@@ -25,7 +25,7 @@ function myRound($int)
     }
 }
 
-$someInt = 55.8;
+$someInt = 55.7;
 
 $result = myRound($someInt);
 echo $result;
