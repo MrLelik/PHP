@@ -52,26 +52,45 @@ echo '<b>' . 'Задание 3 trim' . '</b>';
 insertBr();
 
 
-function myTrim(&$str)
+function myTrim($str)
 {
     $i = 0;
+    $arr = [];
+    $result = null;
 
-    if ($str{0} == ' ') {
-        $str{0} = '';
-    }
-
-    while ($str{$i}) {
-        if (!$str[$i + 1] && $str{$i} == ' ') {
-            $str{$i} = '';
-        }
+    while (isset($str{$i})) {
+        $arr[] = $str{$i};
         $i++;
     }
 
-    return $str;
+    foreach ($arr as $key => $value) {
+        if ($value == ' ') {
+            unset($arr[$key]);
+        } else {
+            break;
+        }
+    }
+
+    for ($j = count($arr); $j > 0; $j-- ) {
+        if ($arr[$j] == ' ') {
+            unset($arr[$j]);
+        } else {
+            break;
+        }
+    }
+
+    foreach ($arr as $value) {
+        $result .= $value;
+    }
+
+    return $result;
 }
 
-$someString = ' Hello ';
-echo myTrim($someString);
+$someStr = '   Hello World   ';
+var_dump($someStr);
+echo '<br>';
+$result = myTrim($someStr);
+var_dump($result);
 
 
 //Реализуйте самостоятельно функцию:
