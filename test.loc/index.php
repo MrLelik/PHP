@@ -1,25 +1,20 @@
 <?php
 
-function myMax($arr)
-{
-    $count = count($arr);
-    $max = $arr[0];
 
-    for ($i = 0; $i <= $count; $i++) {
-        if ($max > $arr[$i]) {
-            $max = $arr[$i];
+function myMin(&$arr)
+{
+    for ($i = 0; $i < count($arr); $i++) {
+        for ($j = $i + 1; $j < count($arr); $j++) {
+            if ($arr[$i] > $arr[$j]) {
+                $temp = $arr[$j];
+                $arr[$j] = $arr[$i];
+                $arr[$i] = $temp;
+            }
         }
     }
-    return $max;
+    return $arr[0];
 }
 
-$arrNumbers = [];
-
-for ($i = 0; $i <= 10; $i++) {
-    $arrNumbers[] = random_int(0, 20);
-}
-print_r($arrNumbers);
-echo '<br>';
-
-$result = myMax($arrNumbers);
-echo $result;
+$someArr = [5, 9, 6, 4, 0, 1, 7, 2, 8, 3];
+echo '<pre>';
+print_r(myMin($someArr));
