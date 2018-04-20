@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e3c5629-4329-4c87-8b00-1a435bf887dc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/mysite.loc/include/page1.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite.loc/include/page2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite.loc/include/page3.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite.loc/include/page1.php" beforeDir="false" afterPath="$PROJECT_DIR$/mysite.loc/include/page1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite.loc/include/page2.php" beforeDir="false" afterPath="$PROJECT_DIR$/mysite.loc/include/page2.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite.loc/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mysite.loc/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.loc/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.loc/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,8 +34,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite.loc/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+            <state relative-caret-position="684">
+              <caret line="61" column="2" lean-forward="true" selection-start-line="61" selection-start-column="2" selection-end-line="61" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -43,26 +43,26 @@
       <file leaf-file-name="page1.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite.loc/include/page1.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
+            <state relative-caret-position="572">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page2.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page2.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite.loc/include/page2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+            <state relative-caret-position="416">
+              <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="func.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Bootstrap.loc/func.php">
+      <file leaf-file-name="page3.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mysite.loc/include/page3.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="66" column="66" lean-forward="true" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="66" />
+            <state relative-caret-position="130">
+              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -94,9 +94,10 @@
         <option value="$PROJECT_DIR$/sourceit.loc/index.php" />
         <option value="$PROJECT_DIR$/sourceit.loc/tasks/task5/index.php" />
         <option value="$PROJECT_DIR$/test.loc/index.php" />
-        <option value="$PROJECT_DIR$/mysite.loc/index.php" />
-        <option value="$PROJECT_DIR$/mysite.loc/include/page1.php" />
         <option value="$PROJECT_DIR$/mysite.loc/include/page2.php" />
+        <option value="$PROJECT_DIR$/mysite.loc/include/page1.php" />
+        <option value="$PROJECT_DIR$/mysite.loc/include/page3.php" />
+        <option value="$PROJECT_DIR$/mysite.loc/index.php" />
       </list>
     </option>
   </component>
@@ -120,7 +121,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -152,6 +152,11 @@
             <path>
               <item name="server" type="b2602c69:ProjectViewProjectNode" />
               <item name="server" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sourceit.loc" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="test.loc" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -163,6 +168,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -246,11 +252,13 @@
       <workItem from="1524002933295" duration="1507000" />
       <workItem from="1524078490389" duration="4132000" />
       <workItem from="1524139312415" duration="24243000" />
+      <workItem from="1524217840785" duration="2451000" />
+      <workItem from="1524221524376" duration="9768000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159852000" />
+    <option name="totallyTimeSpent" value="172071000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -265,7 +273,7 @@
     <frame x="-1" y="26" width="1922" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49592668" visible="true" weight="0.1705757" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4950386" visible="true" weight="0.17377399" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -275,7 +283,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info id="Favorites" order="2" sideWeight="0.5040733" side_tool="true" weight="0.1453125" />
+      <window_info id="Favorites" order="2" sideWeight="0.50496143" side_tool="true" weight="0.17377399" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -538,20 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sourceit.loc/tasks/inClass/Calk/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sourceit.loc/tasks/inClass/Calk/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db.loc/db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -580,9 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///var/log/apache2/error.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/sourceit.loc/tasks/task5/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -604,31 +595,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sourceit.loc/tasks/inClass/Calk/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sourceit.loc/tasks/inClass/Calk/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Bootstrap.loc/func.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="66" column="66" lean-forward="true" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="66" />
+        <state relative-caret-position="788">
+          <caret line="66" column="66" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite.loc/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+        <state relative-caret-position="684">
+          <caret line="61" column="2" lean-forward="true" selection-start-line="61" selection-start-column="2" selection-end-line="61" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite.loc/include/page1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
+        <state relative-caret-position="572">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite.loc/include/page2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        <state relative-caret-position="416">
+          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite.loc/include/page3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
         </state>
       </provider>
     </entry>
