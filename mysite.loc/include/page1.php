@@ -20,3 +20,6 @@
             <input type="submit" class="btn btn-info pull-left" value="Далее" name="page2">
         </div>
     </div>
+<?php
+
+?>

@@ -199,11 +199,15 @@
                 <a class="btn btn-success" href="tasks/inClass/Calk/index.php">InClass - Calk</a>
                 <div class="descr">
                     Задание на занятии.
-                    Calk.
+                    Calk
                 </div>
             </div>
             <div class="buttons">
-                <a class="btn btn-success" href="#">Hometask #</a>
+                <a class="btn btn-success" href="tasks/inClass/Blog/index.php">Blog 1.0</a>
+                <div class="descr">
+                    Задание на занятии.
+                    Blog 1.0
+                </div>
             </div>
             <div class="buttons">
                 <a class="btn btn-success" href="#">Hometask #</a>
