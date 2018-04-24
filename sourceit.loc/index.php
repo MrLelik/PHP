@@ -83,7 +83,7 @@
                 </div>
             </div>
             <div class="buttons">
-                <a class="btn btn-success" href="#">Hometask 5</a>
+                <a class="btn btn-success" href="tasks/task5/index.php">Hometask 5</a>
                 <div class="descr">
                     <p>16.04.2018</p>
                     <p>array_key_exists()</p>
@@ -100,7 +100,11 @@
                 </div>
             </div>
             <div class="buttons">
-                <a class="btn btn-success" href="#">Hometask 6</a>
+                <a class="btn btn-success" href="tasks/task6/index.php">My SESSION</a>
+                <div class="descr">
+                    <p>Многостраничность</p>
+                    <p>Сохранение значений в SESSION</p>
+                </div>
             </div>
             <div class="buttons">
                 <a class="btn btn-success" href="#">Hometask 7</a>
@@ -203,14 +207,18 @@
                 </div>
             </div>
             <div class="buttons">
-                <a class="btn btn-success" href="tasks/inClass/Blog/index.php">Blog 1.0</a>
+                <a class="btn btn-success" href="tasks/inClass/Blog%201.0/index.php">Blog 1.0</a>
                 <div class="descr">
-                    Задание на занятии.
-                    Blog 1.0
+                    <p>Задание на занятии.</p>
+                    <p>Blog 1.0</p>
                 </div>
             </div>
             <div class="buttons">
-                <a class="btn btn-success" href="#">Hometask #</a>
+                <a class="btn btn-success" href="tasks/inClass/Blog%202.0/index.php">Blog 2.0</a>
+                <div class="descr">
+                    <p>Задание на занятии.</p>
+                    <p>Blog 2.0</p>
+                </div>
             </div>
             <div class="buttons">
                 <a class="btn btn-success" href="#">Hometask #</a>
