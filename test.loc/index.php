@@ -99,32 +99,26 @@
 
         <form class="form-horizontal bt1" role="form">
             <div class="form-group">
-                <label class="col-sm-2 control-label">Название</label>
+                <label class="col-sm-2 control-label">Имя</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" placeholder="Название">
+                    <input type="text" class="form-control" placeholder="Имя">
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Описание</label>
+                <label class="col-sm-2 control-label">Тема</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" placeholder="Описание">
+                    <input type="text" class="form-control" placeholder="Тема">
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Цена</label>
+                <label class="col-sm-2 control-label">Комментарий</label>
                 <div class="col-sm-5">
-                    <p class="form-control-static">$300.000</p>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Почта</label>
-                <div class="col-sm-5">
-                    <input type="email" class="form-control" placeholder="Почта">
+                    <textarea class="form-control" rows="3" placeholder="Комментарий"></textarea>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-sm-7">
-                    <button type="submit" class="btn btn-success pull-right">Заказать</button>
+                    <button type="submit" class="btn btn-success pull-right">Отправить</button>
                 </div>
             </div>
         </form>

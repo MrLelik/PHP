@@ -172,11 +172,9 @@ if (isset($_SESSION['access']) && $_SESSION['access']) {
                 <div id="slidemenu">
 
                     <ul class="nav navbar-nav">
-<!--                        <li class="active"><a href="/">Главная</a></li>-->
-                        <li><a href="#">Контакты</a></li>
+                        <li><a href="feedback.php">Контакты</a></li>
                     </ul>
                     <form class="navbar-form navbar-right" role="form">
-<!--                        <button type="submit" class="btn btn-default">Выход</button>-->
                     </form>
 
                 </div>

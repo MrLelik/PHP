@@ -85,13 +85,10 @@ if (isset($_SESSION['access']) && !$_SESSION['access']) {
 
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/">Главная</a></li>
-                <!--                <li><a href="#">Шаблоны</a></li>-->
-                <!--                <li><a href="#">Плагины</a></li>-->
-                <li><a href="#">Контакты</a></li>
+                <li><a href="feedback.php">Контакты</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="form">
                 <a href="/?logout" class="btn btn-default et1">Выход</a>
-<!--                <button type="submit" class="btn btn-default">Выход</button>-->
             </form>
 
         </div>
