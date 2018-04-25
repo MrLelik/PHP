@@ -94,41 +94,15 @@ require_once 'function.php';
                 <?php endif; ?>
             </ul>
             <?php if (isset($_SESSION['access']) && $_SESSION['access']): ?>
-            <form class="navbar-form navbar-right" role="form">
-                <a href="/?logout" class="btn btn-default et1">Выход</a>
-            </form>
+                <form class="navbar-form navbar-right" role="form">
+                    <a href="/?logout" class="btn btn-default et1">Выход</a>
+                </form>
             <?php endif; ?>
         </div>
     </div>
 
-    <div id="products" class="row list-group pd1">
-
-        <form action="feedbackMail.php" class="form-horizontal bt1" role="form" method="post">
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Имя</label>
-                <div class="col-sm-5">
-                    <input type="text" class="form-control" name="nameFeedback" placeholder="Имя" value="<?php
-                    echo (isset($_SESSION['access']) && $_SESSION['access']) ? LOGIN : '' ?>">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Тема</label>
-                <div class="col-sm-5">
-                    <input type="text" class="form-control" name="subjectFeedback" placeholder="Тема">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Комментарий</label>
-                <div class="col-sm-5">
-                    <textarea class="form-control" rows="3" name="commentFeedback" placeholder="Комментарий"></textarea>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-7">
-                    <button type="submit" class="btn btn-success pull-right">Отправить</button>
-                </div>
-            </div>
-        </form>
+    <div id="products" class="row list-group pd1 col-md-6 col-md-offset-4">
+        <h1 class="text-success"><?php sendMailFeedback($_POST); ?></h1>
     </div>
 </div>
 </body>

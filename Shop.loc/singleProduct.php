@@ -1,6 +1,12 @@
 <?php
 require_once 'function.php';
+
+if (isset($_SESSION['access']) && !$_SESSION['access']) {
+    header('Location: /access_denied.php');
+    exit();
+}
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -69,9 +75,6 @@ require_once 'function.php';
             margin-left: 20px;
             margin-top: 120px;
         }
-        .bt1 {
-            margin-left: 250px;
-        }
         .et1 {
             margin-right: 10px;
         }
@@ -79,57 +82,56 @@ require_once 'function.php';
 </head>
 <body>
 <div class="container">
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="slide-nav">
 
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="slide-nav">
         <div class="navbar-header">
             <a class="navbar-brand" href=".">Мой магазин</a>
         </div>
 
         <div id="slidemenu">
-
             <ul class="nav navbar-nav">
-                <?php if (isset($_SESSION['access']) && $_SESSION['access']): ?>
-                    <li class="active"><a href="/">Главная</a></li>
-                    <li><a href="feedback.php">Контакты</a></li>
-                <?php endif; ?>
+                <li class="active"><a href="/">Главная</a></li>
+                <li><a href="feedback.php">Контакты</a></li>
             </ul>
-            <?php if (isset($_SESSION['access']) && $_SESSION['access']): ?>
             <form class="navbar-form navbar-right" role="form">
                 <a href="/?logout" class="btn btn-default et1">Выход</a>
             </form>
-            <?php endif; ?>
         </div>
     </div>
 
     <div id="products" class="row list-group pd1">
+        <?php
+        $product = $_GET;
 
-        <form action="feedbackMail.php" class="form-horizontal bt1" role="form" method="post">
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Имя</label>
-                <div class="col-sm-5">
-                    <input type="text" class="form-control" name="nameFeedback" placeholder="Имя" value="<?php
-                    echo (isset($_SESSION['access']) && $_SESSION['access']) ? LOGIN : '' ?>">
+        if ($product) {
+            saveOrder($product);
+        }
+        ?>
+        <?php if ($product): ?>
+
+            <div class="item col-xs-12 col-lg-10">
+                <div class="thumbnail">
+                    <img class="group list-group-image pull-left" src="http://bootstraptema.ru/images/type/400x250.png" alt="1" />
+                    <div class="caption">
+                        <h4 class="group inner list-group-item-heading st1"><?= $product['title']; ?></h4>
+                        <p class="group inner list-group-item-text st1"><?= $product['description']; ?></p>
+                        <div class="row">
+                            <div class="col-xs-8 col-md-4">
+                                <p class="lead pr1"><?= $product['price']; ?></p>
+                            </div>
+                            <div class="col-xs-10 col-md-12">
+                                <a class="btn btn-success pull-right" href="order.php">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Тема</label>
-                <div class="col-sm-5">
-                    <input type="text" class="form-control" name="subjectFeedback" placeholder="Тема">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Комментарий</label>
-                <div class="col-sm-5">
-                    <textarea class="form-control" rows="3" name="commentFeedback" placeholder="Комментарий"></textarea>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-7">
-                    <button type="submit" class="btn btn-success pull-right">Отправить</button>
-                </div>
-            </div>
-        </form>
+
+        <?php else: ?>
+            <p>Product not found!!!</p>
+        <?php endif; ?>
     </div>
+
 </div>
 </body>
 </html>

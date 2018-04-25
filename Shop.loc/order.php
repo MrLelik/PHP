@@ -1,6 +1,12 @@
 <?php
 require_once 'function.php';
+
+if (isset($_SESSION['access']) && !$_SESSION['access']) {
+    header('Location: /access_denied.php');
+    exit();
+}
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -88,44 +94,54 @@ require_once 'function.php';
         <div id="slidemenu">
 
             <ul class="nav navbar-nav">
-                <?php if (isset($_SESSION['access']) && $_SESSION['access']): ?>
-                    <li class="active"><a href="/">Главная</a></li>
-                    <li><a href="feedback.php">Контакты</a></li>
-                <?php endif; ?>
+                <li class="active"><a href="/">Главная</a></li>
+                <li><a href="feedback.php">Контакты</a></li>
             </ul>
-            <?php if (isset($_SESSION['access']) && $_SESSION['access']): ?>
             <form class="navbar-form navbar-right" role="form">
                 <a href="/?logout" class="btn btn-default et1">Выход</a>
             </form>
-            <?php endif; ?>
+
         </div>
     </div>
 
     <div id="products" class="row list-group pd1">
 
-        <form action="feedbackMail.php" class="form-horizontal bt1" role="form" method="post">
+        <form action="orderMail.php" class="form-horizontal bt1" role="form" method="post">
             <div class="form-group">
-                <label class="col-sm-2 control-label">Имя</label>
+                <label class="col-sm-2 control-label">Название</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" name="nameFeedback" placeholder="Имя" value="<?php
-                    echo (isset($_SESSION['access']) && $_SESSION['access']) ? LOGIN : '' ?>">
+                    <input type="text" class="form-control" name="name" placeholder="Название" value="<?php
+                    echo isset($_SESSION['title']) ? $_SESSION['title'] : '';
+                    ?>">
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Тема</label>
+                <label class="col-sm-2 control-label">Описание</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" name="subjectFeedback" placeholder="Тема">
+                    <input type="text" class="form-control" name="description" placeholder="Описание" value="<?php
+                    echo isset($_SESSION['description']) ? $_SESSION['description'] : '';
+                    ?>">
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Комментарий</label>
+                <label class="col-sm-2 control-label">Цена</label>
                 <div class="col-sm-5">
-                    <textarea class="form-control" rows="3" name="commentFeedback" placeholder="Комментарий"></textarea>
+                    <p class="form-control-static"><?php
+                        echo isset($_SESSION['price']) ? $_SESSION['price'] : '';
+                        ?></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Почта</label>
+                <div class="col-sm-5">
+                    <input type="email" class="form-control" name="email" placeholder="Почта" value="<?php
+                    echo isset($_SESSION['email']) ? $_SESSION['email'] : '';
+                    ?>">
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-sm-7">
-                    <button type="submit" class="btn btn-success pull-right">Отправить</button>
+                    <button type="submit" class="btn btn-success pull-right">Подтвердить заказ</button>
                 </div>
             </div>
         </form>

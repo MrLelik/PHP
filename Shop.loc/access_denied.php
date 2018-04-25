@@ -1,21 +1,3 @@
-<?php
-require_once 'function.php';
-
-if (isset($_GET) && key_exists('logout', $_GET)) {
-    session_destroy();
-    header('Location: /');
-    exit();
-}
-
-if (isset($_POST) && !empty($_POST)) {
-    login($_POST);
-}
-
-if (isset($_SESSION['access']) && $_SESSION['access']) {
-    header('Location: /my_shop.php');
-    exit();
-}
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -158,54 +140,34 @@ if (isset($_SESSION['access']) && $_SESSION['access']) {
         .myClass {
             margin-top: 200px;
         }
+        .pd1 {
+            margin-top: 80px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="slide-nav">
+<div class="container">
+    <div class="row">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="slide-nav">
 
-                <div class="navbar-header">
-                    <a class="navbar-brand" href=".">Мой магазин</a>
-                </div>
-
-                <div id="slidemenu">
-
-                    <ul class="nav navbar-nav">
-                        <li><a href="feedback.php">Контакты</a></li>
-                    </ul>
-                    <form class="navbar-form navbar-right" role="form">
-                    </form>
-
-                </div>
+            <div class="navbar-header">
+                <a class="navbar-brand" href=".">Мой магазин</a>
             </div>
-        </div>
-        <div class="row">
 
-            <div class="col-md-offset-3 col-md-6 myClass">
-                <form class="form-horizontal" method="post">
-                    <span class="heading">АВТОРИЗАЦИЯ</span>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="login" id="inputEmail" placeholder="Login">
-                        <i class="fa fa-user"></i>
-                    </div>
-                    <div class="form-group help">
-                        <input type="password" class="form-control" name="password" id="inputPassword" placeholder="Password">
-                        <i class="fa fa-lock"></i>
-<!--                        <a href="#" class="fa fa-question-circle"></a>-->
-                    </div>
-                    <div class="form-group">
-<!--                        <div class="main-checkbox">-->
-<!--                            <input type="checkbox" value="none" id="checkbox1" name="check"/>-->
-<!--                            <label for="checkbox1"></label>-->
-<!--                        </div>-->
-<!--                        <span class="text">Запомнить</span>-->
-                        <button type="submit" class="btn btn-default">ВХОД</button>
-                    </div>
+            <div id="slidemenu">
+
+                <ul class="nav navbar-nav">
+                    <li><a href="feedback.php">Контакты</a></li>
+                </ul>
+                <form class="navbar-form navbar-right" role="form">
                 </form>
-            </div>
 
+            </div>
         </div>
     </div>
+    <div id="products" class="row list-group pd1 col-md-6 col-md-offset-4 pd1">
+        <h1 class="text-danger">Доступ закрыт</h1>
+    </div>
+</div>
 </body>
 </html>
