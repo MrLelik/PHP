@@ -1,6 +1,5 @@
 <?php
 require_once 'function.php';
-require_once 'functionBlog.php';
 
     if (isset($_GET) && key_exists('logout', $_GET)) {
             session_destroy();
@@ -33,10 +32,6 @@ require_once 'functionBlog.php';
         <input type="password" name="password" placeholder="password">
         <input type="submit">
     </form>
-<!--    --><?php
-//    echo '<pre>';
-//    var_dump(getArticle());
-//    ?>
 </body>
 </html>
 
