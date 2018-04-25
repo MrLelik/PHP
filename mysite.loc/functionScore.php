@@ -12,5 +12,3 @@ function getProduct()
     }
     return $arr;
 }
-echo '<pre>';
-var_dump(getProduct());

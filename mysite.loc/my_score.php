@@ -1,3 +1,12 @@
+<?php
+require_once 'function.php';
+
+if (isset($_SESSION['access']) && !$_SESSION['access']) {
+    header('Location: /access_denied.php');
+    exit();
+}
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -81,7 +90,8 @@
                 <li><a href="#">Контакты</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="form">
-                <button type="submit" class="btn btn-default">Выход</button>
+                <a href="/?logout" class="btn btn-default">Выход</a>
+<!--                <button type="submit" class="btn btn-default">Выход</button>-->
             </form>
 
         </div>
@@ -122,7 +132,7 @@
                 <div class="caption">
                     <h4 class="group inner list-group-item-heading">Товар 2</h4>
                     <p class="group inner list-group-item-text">
-                        Описание товара 2, Описание товара 2, Описание товара 2, Описание товара 2, Описание товара 2, Описание товара 2, Описание товара 2, Описание товара 2, Описание товара 2.
+                        Описание товара 2, Описание товара 2
                     </p>
                     <div class="row">
                         <div class="col-xs-12 col-md-6">

@@ -1,3 +1,21 @@
+<?php
+require_once 'function.php';
+
+if (isset($_GET) && key_exists('logout', $_GET)) {
+    session_destroy();
+    header('Location: /');
+    exit();
+}
+
+if (isset($_POST) && !empty($_POST)) {
+    login($_POST);
+}
+
+if (isset($_SESSION['access']) && $_SESSION['access']) {
+    header('Location: /my_score.php');
+    exit();
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -173,14 +191,14 @@
         <div class="row">
 
             <div class="col-md-offset-3 col-md-6 myClass">
-                <form class="form-horizontal">
+                <form class="form-horizontal" method="post">
                     <span class="heading">АВТОРИЗАЦИЯ</span>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="inputEmail" placeholder="Login">
+                        <input type="text" class="form-control" name="login" id="inputEmail" placeholder="Login">
                         <i class="fa fa-user"></i>
                     </div>
                     <div class="form-group help">
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        <input type="password" class="form-control" name="password" id="inputPassword" placeholder="Password">
                         <i class="fa fa-lock"></i>
 <!--                        <a href="#" class="fa fa-question-circle"></a>-->
                     </div>
@@ -195,7 +213,7 @@
                 </form>
             </div>
 
-        </div><!-- /.row -->
-    </div><!-- /.container -->
+        </div>
+    </div>
 </body>
 </html>
