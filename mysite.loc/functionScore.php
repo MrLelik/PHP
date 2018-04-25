@@ -1,9 +1,9 @@
 <?php
 
-function getProduct()
+function getProducts()
 {
     $arr = [];
-    for ($i = 1; $i <= 6; $i++) {
+    for ($i = 1; $i <= 5; $i++) {
         $arr[] = [
             'title' => 'Товар ' . $i,
             'description' => 'Описание товара ' . $i . ' ,Описание товара ' . $i,

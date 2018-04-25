@@ -1,8 +1,11 @@
 <?php
 session_start();
+require_once 'functionScore.php';
 
 const LOGIN = 'lelik';
 const PASSWORD = 'qqq';
+const USEREMAIL = 'lelik@gmail.com';
+const ADMINEMAIL = 'admin@gmail.com';
 
 function login(array $post)
 {
@@ -17,6 +20,7 @@ function login(array $post)
     if ($check) {
         $_SESSION['access'] = true;
         $_SESSION['login'] = $post['login'];
+        $_SESSION['email'] = USEREMAIL;
         header('Location: /my_score.php');
         exit();
     } else {

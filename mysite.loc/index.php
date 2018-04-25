@@ -166,12 +166,6 @@ if (isset($_SESSION['access']) && $_SESSION['access']) {
             <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="slide-nav">
 
                 <div class="navbar-header">
-                    <a class="navbar-toggle">
-                        <span class="sr-only">Открыть меню</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
                     <a class="navbar-brand" href=".">Мой магазин</a>
                 </div>
 

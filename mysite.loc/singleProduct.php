@@ -5,8 +5,8 @@ if (isset($_SESSION['access']) && !$_SESSION['access']) {
     header('Location: /access_denied.php');
     exit();
 }
-
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -68,6 +68,13 @@ if (isset($_SESSION['access']) && !$_SESSION['access']) {
         .pd1 {
             margin-top: 80px;
         }
+        .st1 {
+            margin-left: 420px;
+        }
+        .pr1 {
+            margin-left: 20px;
+            margin-top: 120px;
+        }
         .et1 {
             margin-right: 10px;
         }
@@ -75,61 +82,58 @@ if (isset($_SESSION['access']) && !$_SESSION['access']) {
 </head>
 <body>
 <div class="container">
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="slide-nav">
 
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="slide-nav">
         <div class="navbar-header">
             <a class="navbar-brand" href=".">Мой магазин</a>
         </div>
 
         <div id="slidemenu">
-
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/">Главная</a></li>
-                <!--                <li><a href="#">Шаблоны</a></li>-->
-                <!--                <li><a href="#">Плагины</a></li>-->
                 <li><a href="#">Контакты</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="form">
                 <a href="/?logout" class="btn btn-default et1">Выход</a>
-<!--                <button type="submit" class="btn btn-default">Выход</button>-->
             </form>
-
         </div>
     </div>
 
     <div id="products" class="row list-group pd1">
+        <?php
+        $product = $_GET;
 
-    <?php $products = getProducts(); ?>
+        if ($product) {
+            $_SESSION['title'] = $product['title'];
+            $_SESSION['description'] = $product['description'];
+            $_SESSION['price'] = $product['price'];
+        }
+        ?>
+        <?php if ($product): ?>
 
-    <?php if ($products): ?>
-
-        <?php foreach ($products as $product): ?>
-
-            <div class="item col-xs-4 col-lg-4">
+            <div class="item col-xs-12 col-lg-10">
                 <div class="thumbnail">
-                    <img class="group list-group-image" src="http://bootstraptema.ru/images/type/400x250.png" alt="1" />
+                    <img class="group list-group-image pull-left" src="http://bootstraptema.ru/images/type/400x250.png" alt="1" />
                     <div class="caption">
-                        <h4 class="group inner list-group-item-heading"><?= $product['title']; ?></h4>
-                        <p class="group inner list-group-item-text"><?= $product['description']; ?></p>
+                        <h4 class="group inner list-group-item-heading st1"><?= $product['title']; ?></h4>
+                        <p class="group inner list-group-item-text st1"><?= $product['description']; ?></p>
                         <div class="row">
-                            <div class="col-xs-12 col-md-6">
-                                <p class="lead"><?= $product['price']; ?></p>
+                            <div class="col-xs-8 col-md-4">
+                                <p class="lead pr1"><?= $product['price']; ?></p>
                             </div>
-                            <div class="col-xs-12 col-md-6">
-                                <a class="btn btn-success pull-right" href="singleProduct.php?title=<?=$product['title']; ?> &description=<?=$product['description']; ?> &price=<?=$product['price']; ?> ">Подробнее</a>
+                            <div class="col-xs-10 col-md-12">
+                                <a class="btn btn-success pull-right" href="order.php">Заказать</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-        <?php endforeach; ?>
-
         <?php else: ?>
-            <p>Products not found!!!</p>
-    <?php endif; ?>
-
+            <p>Product not found!!!</p>
+        <?php endif; ?>
     </div>
+
 </div>
 </body>
 </html>

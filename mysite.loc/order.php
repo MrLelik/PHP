@@ -5,8 +5,8 @@ if (isset($_SESSION['access']) && !$_SESSION['access']) {
     header('Location: /access_denied.php');
     exit();
 }
-
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -68,6 +68,16 @@ if (isset($_SESSION['access']) && !$_SESSION['access']) {
         .pd1 {
             margin-top: 80px;
         }
+        .st1 {
+            margin-left: 420px;
+        }
+        .pr1 {
+            margin-left: 20px;
+            margin-top: 120px;
+        }
+        .bt1 {
+            margin-left: 250px;
+        }
         .et1 {
             margin-right: 10px;
         }
@@ -85,13 +95,10 @@ if (isset($_SESSION['access']) && !$_SESSION['access']) {
 
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/">Главная</a></li>
-                <!--                <li><a href="#">Шаблоны</a></li>-->
-                <!--                <li><a href="#">Плагины</a></li>-->
                 <li><a href="#">Контакты</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="form">
                 <a href="/?logout" class="btn btn-default et1">Выход</a>
-<!--                <button type="submit" class="btn btn-default">Выход</button>-->
             </form>
 
         </div>
@@ -99,36 +106,45 @@ if (isset($_SESSION['access']) && !$_SESSION['access']) {
 
     <div id="products" class="row list-group pd1">
 
-    <?php $products = getProducts(); ?>
-
-    <?php if ($products): ?>
-
-        <?php foreach ($products as $product): ?>
-
-            <div class="item col-xs-4 col-lg-4">
-                <div class="thumbnail">
-                    <img class="group list-group-image" src="http://bootstraptema.ru/images/type/400x250.png" alt="1" />
-                    <div class="caption">
-                        <h4 class="group inner list-group-item-heading"><?= $product['title']; ?></h4>
-                        <p class="group inner list-group-item-text"><?= $product['description']; ?></p>
-                        <div class="row">
-                            <div class="col-xs-12 col-md-6">
-                                <p class="lead"><?= $product['price']; ?></p>
-                            </div>
-                            <div class="col-xs-12 col-md-6">
-                                <a class="btn btn-success pull-right" href="singleProduct.php?title=<?=$product['title']; ?> &description=<?=$product['description']; ?> &price=<?=$product['price']; ?> ">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
+        <form class="form-horizontal bt1" role="form">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Название</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" placeholder="Название" value="<?php
+                    echo isset($_SESSION['title']) ? $_SESSION['title'] : '';
+                    ?>">
                 </div>
             </div>
-
-        <?php endforeach; ?>
-
-        <?php else: ?>
-            <p>Products not found!!!</p>
-    <?php endif; ?>
-
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Описание</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" placeholder="Описание" value="<?php
+                    echo isset($_SESSION['description']) ? $_SESSION['description'] : '';
+                    ?>">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Цена</label>
+                <div class="col-sm-5">
+                    <p class="form-control-static"><?php
+                        echo isset($_SESSION['price']) ? $_SESSION['price'] : '';
+                        ?></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Почта</label>
+                <div class="col-sm-5">
+                    <input type="email" class="form-control" placeholder="Почта" value="<?php
+                    echo isset($_SESSION['email']) ? $_SESSION['email'] : '';
+                    ?>">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-7">
+                    <button type="submit" class="btn btn-success pull-right">Подтвердить заказ</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 </body>
