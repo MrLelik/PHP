@@ -29,3 +29,20 @@ function login(array $post)
         exit();
     }
 }
+
+function sendMail()
+{
+    $to = ADMINEMAIL;
+    $subject = 'the subject';
+    $message = $_SESSION['title'] . ' ' . $_SESSION['description'] . ' ' . $_SESSION['price'];
+
+    mail($to, $subject, $message);
+    echo 'Заказ оформлен';
+}
+
+function saveOrder(array $product)
+{
+    $_SESSION['title'] = $product['title'];
+    $_SESSION['description'] = $product['description'];
+    $_SESSION['price'] = $product['price'];
+}

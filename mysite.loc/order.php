@@ -106,11 +106,11 @@ if (isset($_SESSION['access']) && !$_SESSION['access']) {
 
     <div id="products" class="row list-group pd1">
 
-        <form class="form-horizontal bt1" role="form">
+        <form action="orderMail.php" class="form-horizontal bt1" role="form" method="post">
             <div class="form-group">
                 <label class="col-sm-2 control-label">Название</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" placeholder="Название" value="<?php
+                    <input type="text" class="form-control" name="name" placeholder="Название" value="<?php
                     echo isset($_SESSION['title']) ? $_SESSION['title'] : '';
                     ?>">
                 </div>
@@ -118,7 +118,7 @@ if (isset($_SESSION['access']) && !$_SESSION['access']) {
             <div class="form-group">
                 <label class="col-sm-2 control-label">Описание</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" placeholder="Описание" value="<?php
+                    <input type="text" class="form-control" name="description" placeholder="Описание" value="<?php
                     echo isset($_SESSION['description']) ? $_SESSION['description'] : '';
                     ?>">
                 </div>
@@ -134,7 +134,7 @@ if (isset($_SESSION['access']) && !$_SESSION['access']) {
             <div class="form-group">
                 <label class="col-sm-2 control-label">Почта</label>
                 <div class="col-sm-5">
-                    <input type="email" class="form-control" placeholder="Почта" value="<?php
+                    <input type="email" class="form-control" name="email" placeholder="Почта" value="<?php
                     echo isset($_SESSION['email']) ? $_SESSION['email'] : '';
                     ?>">
                 </div>

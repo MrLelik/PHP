@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e3c5629-4329-4c87-8b00-1a435bf887dc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/mysite.loc/order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysite.loc/singleProduct.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysite.loc/orderMail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite.loc/access_denied.php" beforeDir="false" afterPath="$PROJECT_DIR$/mysite.loc/access_denied.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite.loc/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/mysite.loc/function.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite.loc/functionScore.php" beforeDir="false" afterPath="$PROJECT_DIR$/mysite.loc/functionScore.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite.loc/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mysite.loc/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite.loc/my_score.php" beforeDir="false" afterPath="$PROJECT_DIR$/mysite.loc/my_score.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.loc/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.loc/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite.loc/order.php" beforeDir="false" afterPath="$PROJECT_DIR$/mysite.loc/order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite.loc/singleProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/mysite.loc/singleProduct.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,38 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="singleProduct.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysite.loc/singleProduct.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="121" column="71" selection-start-line="121" selection-start-column="66" selection-end-line="121" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="function.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="function.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysite.loc/function.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="22" column="24" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="order.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mysite.loc/order.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="137" column="69" selection-start-line="137" selection-start-column="69" selection-end-line="137" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.loc/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2990">
-              <caret line="115" column="59" selection-end-line="133" selection-end-column="7" />
+            <state relative-caret-position="684">
+              <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -105,7 +76,6 @@
         <option value="$PROJECT_DIR$/test.loc/function.php" />
         <option value="$PROJECT_DIR$/test.loc/singleArticle.php" />
         <option value="$PROJECT_DIR$/sourceit.loc/index.php" />
-        <option value="$PROJECT_DIR$/mysite.loc/access_denied.php" />
         <option value="$PROJECT_DIR$/mysite.loc/logout.php" />
         <option value="$PROJECT_DIR$/test.loc/blog.php" />
         <option value="$PROJECT_DIR$/test.loc/functionBlog.php" />
@@ -113,9 +83,11 @@
         <option value="$PROJECT_DIR$/mysite.loc/my_score.php" />
         <option value="$PROJECT_DIR$/mysite.loc/index.php" />
         <option value="$PROJECT_DIR$/test.loc/index.php" />
-        <option value="$PROJECT_DIR$/mysite.loc/function.php" />
-        <option value="$PROJECT_DIR$/mysite.loc/singleProduct.php" />
         <option value="$PROJECT_DIR$/mysite.loc/order.php" />
+        <option value="$PROJECT_DIR$/mysite.loc/orderMail.php" />
+        <option value="$PROJECT_DIR$/mysite.loc/singleProduct.php" />
+        <option value="$PROJECT_DIR$/mysite.loc/function.php" />
+        <option value="$PROJECT_DIR$/mysite.loc/access_denied.php" />
       </list>
     </option>
   </component>
@@ -160,27 +132,6 @@
               <item name="server" type="b2602c69:ProjectViewProjectNode" />
               <item name="server" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="sourceit.loc" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sourceit.loc" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tasks" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sourceit.loc" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tasks" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="task6" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sourceit.loc" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tasks" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="task6" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="include" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="server" type="b2602c69:ProjectViewProjectNode" />
@@ -282,12 +233,12 @@
       <workItem from="1524501081481" duration="7757000" />
       <workItem from="1524582144186" duration="1647000" />
       <workItem from="1524596337199" duration="3073000" />
-      <workItem from="1524664202878" duration="22170000" />
+      <workItem from="1524664202878" duration="26264000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219181000" />
+    <option name="totallyTimeSpent" value="223275000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -330,20 +281,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/testPHPLoadFile.loc/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testPHPmyTemplate.loc/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testPHPmyTemplate.loc/template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="788">
@@ -470,13 +407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite.loc/access_denied.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.loc/access_denied.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -555,20 +485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite.loc/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="159" column="9" selection-start-line="159" selection-start-column="9" selection-end-line="159" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.loc/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2990">
-          <caret line="115" column="59" selection-end-line="133" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inClass.loc/singleArticle.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="632">
@@ -576,34 +492,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite.loc/my_score.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-280">
-          <caret line="92" column="61" selection-start-line="92" selection-start-column="61" selection-end-line="92" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sourceit.loc/tasks/task6/include/page1.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite.loc/singleProduct.php">
+    <entry file="file://$PROJECT_DIR$/mysite.loc/my_score.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="121" column="71" selection-start-line="121" selection-start-column="66" selection-end-line="121" selection-end-column="71" />
+        <state relative-caret-position="306">
+          <caret line="69" column="9" lean-forward="true" selection-start-line="67" selection-start-column="8" selection-end-line="69" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite.loc/function.php">
+    <entry file="file://$PROJECT_DIR$/mysite.loc/access_denied.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="24" />
+        <state relative-caret-position="2782">
+          <caret line="170" column="45" selection-start-line="170" selection-start-column="45" selection-end-line="170" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite.loc/singleProduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2756">
+          <caret line="106" column="30" selection-start-line="106" selection-start-column="30" selection-end-line="106" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite.loc/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite.loc/order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="137" column="69" selection-start-line="137" selection-start-column="69" selection-end-line="137" selection-end-column="69" />
+        <state relative-caret-position="3354">
+          <caret line="129" column="75" selection-start-line="129" selection-start-column="57" selection-end-line="129" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite.loc/orderMail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="111" column="7" lean-forward="true" selection-start-line="111" selection-start-column="7" selection-end-line="111" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sourceit.loc/tasks/task6/include/page2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.loc/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="60" column="9" lean-forward="true" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite.loc/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
         </state>
       </provider>
     </entry>
