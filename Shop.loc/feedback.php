@@ -89,8 +89,8 @@ require_once 'function.php';
 
             <ul class="nav navbar-nav">
                 <?php if (isset($_SESSION['access']) && $_SESSION['access']): ?>
-                    <li class="active"><a href="/">Главная</a></li>
-                    <li><a href="feedback.php">Контакты</a></li>
+                    <li><a href="/">Главная</a></li>
+                    <li class="active"><a href="feedback.php">Контакты</a></li>
                 <?php endif; ?>
             </ul>
             <?php if (isset($_SESSION['access']) && $_SESSION['access']): ?>
