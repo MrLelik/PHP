@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e3c5629-4329-4c87-8b00-1a435bf887dc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop.loc/feedback.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop.loc/feedback.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop.loc/feedbackMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop.loc/feedbackMail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop.loc/order.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop.loc/order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop.loc/orderMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop.loc/orderMail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop.loc/singleProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/Shop.loc/singleProduct.php" afterDir="false" />
-    </list>
+    <list default="true" id="4e3c5629-4329-4c87-8b00-1a435bf887dc" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,17 +28,17 @@
       <file leaf-file-name="feedback.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Shop.loc/feedback.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
+            <state relative-caret-position="520">
+              <caret line="92" column="37" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feedbackMail.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="feedbackMail.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Shop.loc/feedbackMail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
+            <state relative-caret-position="442">
+              <caret line="92" column="37" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -83,7 +76,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="singleProduct.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="singleProduct.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Shop.loc/singleProduct.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="572">
@@ -141,11 +134,11 @@
         <option value="$PROJECT_DIR$/mysite.loc/orderMail.php" />
         <option value="$PROJECT_DIR$/mysite.loc/feedbackMail.php" />
         <option value="$PROJECT_DIR$/mysite.loc/function.php" />
-        <option value="$PROJECT_DIR$/Shop.loc/feedback.php" />
-        <option value="$PROJECT_DIR$/Shop.loc/feedbackMail.php" />
         <option value="$PROJECT_DIR$/Shop.loc/order.php" />
         <option value="$PROJECT_DIR$/Shop.loc/orderMail.php" />
         <option value="$PROJECT_DIR$/Shop.loc/singleProduct.php" />
+        <option value="$PROJECT_DIR$/Shop.loc/feedback.php" />
+        <option value="$PROJECT_DIR$/Shop.loc/feedbackMail.php" />
       </list>
     </option>
   </component>
@@ -297,12 +290,12 @@
       <workItem from="1524582144186" duration="1647000" />
       <workItem from="1524596337199" duration="3073000" />
       <workItem from="1524664202878" duration="30998000" />
-      <workItem from="1524842617019" duration="276000" />
+      <workItem from="1524842617019" duration="706000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="228285000" />
+    <option name="totallyTimeSpent" value="228715000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -556,20 +549,6 @@
     <entry file="file://$PROJECT_DIR$/Shop.loc/access_denied.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Shop.loc/feedback.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shop.loc/feedbackMail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Shop.loc/functionScore.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -597,6 +576,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
           <caret line="94" column="17" lean-forward="true" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shop.loc/feedback.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="92" column="37" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shop.loc/feedbackMail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="92" column="37" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
         </state>
       </provider>
     </entry>
