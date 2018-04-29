@@ -1,9 +1,29 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<?php
+require_once 'function.php';
 
+//if (isset($_POST) && !empty($_POST)) {
+//    login($_POST);
+//}
+
+//if (isset($_SESSION['access']) && $_SESSION['access']) {
+//    header('Location: /index.php');
+//    exit();
+//}
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Document</title>
+</head>
 <style>
     /* Demo Background */
-    body{background:url(/images/bg.png)}
+    body{background:url(/img/bg.png)}
 
     /* Form Style */
     .form-horizontal{
@@ -132,7 +152,7 @@
         }
     }
 </style>
-
+<body>
 <div class="container">
     <div class="row">
 
@@ -140,7 +160,7 @@
             <form class="form-horizontal">
                 <span class="heading">АВТОРИЗАЦИЯ</span>
                 <div class="form-group">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="E-mail">
+                    <input type="text" class="form-control" id="inputEmail" placeholder="E-mail">
                     <i class="fa fa-user"></i>
                 </div>
                 <div class="form-group help">
@@ -155,3 +175,9 @@
 
     </div>
 </div>
+</body>
+</html>
+
+
+
+

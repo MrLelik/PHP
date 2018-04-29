@@ -1,7 +1,7 @@
 <?php
 require_once 'function.php';
 
-if (isset($_SESSION['access']) && !$_SESSION['access']) {
+if (!isset($_SESSION['access']) && !$_SESSION['access']) {
     header('Location: /access_denied.php');
     exit();
 }

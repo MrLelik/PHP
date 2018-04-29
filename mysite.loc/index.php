@@ -1,3 +1,12 @@
+<?php
+require_once 'function.php';
+
+if (!isset($_SESSION['access']) && !$_SESSION['access']) {
+    header('Location: /login.php');
+    exit();
+}
+
+?>
 <?php require_once 'header.php';?>
 
 <!-- Page Header -->
