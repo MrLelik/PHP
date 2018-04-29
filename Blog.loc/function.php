@@ -59,16 +59,18 @@ function viewTitle()
     }
 }
 
-function viewTitle2()
-{
-    $titleHome = 'Custom Blog';
-    $titleAbout = 'Custom Blog - About';
-    $titleSamplePost = 'Custom Blog - Post';
-    $titleContact = 'Custom Blog - Contact';
 
-    if ($_SERVER['REQUEST_URI'] === '/') {
-        echo $titleHome;
-    } elseif (strpos($_SERVER['REQUEST_URI'], 'about' )) {
 
-    }
-}
+//function viewTitle2()
+//{
+//    $titleHome = 'Custom Blog';
+//    $titleAbout = 'Custom Blog - About';
+//    $titleSamplePost = 'Custom Blog - Post';
+//    $titleContact = 'Custom Blog - Contact';
+//
+//    if ($_SERVER['REQUEST_URI'] === '/') {
+//        echo $titleHome;
+//    } elseif (strpos($_SERVER['REQUEST_URI'], 'about' )) {
+//
+//    }
+//}

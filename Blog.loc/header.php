@@ -1,6 +1,12 @@
 <?php
 require_once 'function.php';
 
+if (isset($_GET) && key_exists('logout', $_GET)) {
+    session_destroy();
+    header('Location: /login.php');
+    exit();
+}
+
 if (!isset($_SESSION['access']) && !$_SESSION['access']) {
     header('Location: /login.php');
     exit();

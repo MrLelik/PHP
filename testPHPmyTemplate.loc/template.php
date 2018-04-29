@@ -7,12 +7,9 @@ class template_class
 
     function get_tpl($tpl_name)
         {
-        if (empty($tpl_name) || !file_exists($tpl_name))
-            {
+        if (empty($tpl_name) || !file_exists($tpl_name)) {
              return false;
-            }
-        else
-            {
+        } else {
              $this->html = join('',file($tpl_name));
             }
         }
@@ -24,11 +21,10 @@ class template_class
 
     function tpl_parse()
         {
-        foreach ($this->values as $find => $replace)
-            {
+        foreach ($this->values as $find => $replace) {
              $this->html = str_replace($find, $replace, $this->html);
             }
         }
     }
 $tpl = new template_class;
-?>
+
