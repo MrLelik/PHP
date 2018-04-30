@@ -61,6 +61,39 @@ function viewTitle()
 
 
 
+function getAutor()
+{
+    $posted = ['Harry', 'Oliver',
+        'Jack', 'Thomas', 'William',
+        'James', 'Amelia', 'Olivia',
+        'Jessica', 'Emily', 'Lily',
+        'Mia', 'Isabella'];
+
+    return $posted[random_int(0, count($posted) - 1)];
+}
+
+
+function getDates()
+{
+    $randDay = random_int(0, 300);
+    return date('F d, Y', strtotime("-$randDay days"));
+}
+
+
+function getArticlesBlog()
+{
+    $arr = [];
+    for ($i = 1; $i <= 5; $i++) {
+        $arr[] = [
+            'articleTitle' => 'Some interesting article about something interesting ' . $i,
+            'textTitle' => 'The text is very, very interesting article ' . $i,
+            'author' => getAutor(),
+            'date' => getDates()
+        ];
+    }
+    return $arr;
+}
+
 //function viewTitle2()
 //{
 //    $titleHome = 'Custom Blog';
