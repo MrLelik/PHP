@@ -12,6 +12,13 @@ require_once 'db.php';
     <title>Document</title>
 </head>
 <body>
-
+<div>
+    <pre>
+        <?php
+        $arr = getArticles();
+        print_r($arr);
+        ?>
+    </pre>
+</div>
 </body>
 </html>
