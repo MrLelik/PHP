@@ -26,7 +26,7 @@ function getArticles()
     if ($db) {
         $sql = "SELECT * FROM articles";
 
-        return $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+        return $db->query($sql)->fetch(PDO::FETCH_ASSOC);
     }
 
     return false;

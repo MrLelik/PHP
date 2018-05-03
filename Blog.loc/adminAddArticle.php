@@ -6,11 +6,12 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <!--<a href="#">Add title</a>-->
+                <i class="fa fa-plus-square-o"></i>
                 Add Article
             </li>
         </ol>
 
-        <form role="form">
+        <form role="form" method="post">
             <div class="form-group">
                 <label>Title</label>
                 <input type="text" class="form-control" placeholder="Title" name="title">
@@ -23,7 +24,7 @@
                 <label>Content</label>
                 <textarea class="form-control" rows="10" placeholder="Content" name="content"></textarea>
             </div>
-            <button type="submit" class="btn btn-success">Отправить</button>
+            <button type="submit" name="addArticle" class="btn btn-success">Add</button>
         </form>
     </div>
 </div>

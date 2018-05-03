@@ -1,6 +1,32 @@
 <?php
 require_once 'function.php';
 
+if (!isset($_SESSION['access']) && !$_SESSION['access']) {
+    header('Location: /login.php');
+    exit();
+}
+
+if (isset($_POST['addArticle'])) {
+    insertArticle($_POST);
+    unset($_POST['addArticle']);
+    header('Location: /adminIndex.php');
+    exit();
+}
+
+if (isset($_GET['id']) && !empty($_GET['id'])) {
+    deleteArticle($_GET[id]);
+    $_GET['id'] = null;
+    header('Location: /adminDeleteArticle.php');
+    exit();
+};
+
+if (isset($_POST['changeArticle'])) {
+    updateArticle($_POST);
+    unset($_POST['changeArticle']);
+    unset($_SESSION['change_id']);
+    header('Location: /adminChangeArticle.php');
+    exit();
+}
 
 ?>
 <!DOCTYPE html>

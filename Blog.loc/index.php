@@ -19,33 +19,27 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
-
-                <?php $articles = getArticlesBlog(); ?>
-
-                <?php if ($articles): ?>
-
-                    <?php foreach ($articles as $article): ?>
-
+                <?php if (getArticles()): ?>
+                    <?php foreach (getArticles() as $article): ?>
+                        <?php $autor = getAutor(); ?>
                         <div class="post-preview">
-                            <a href="post.html">
+                            <a href="samplePost.php?title=<?= $article['title'];?> &sub_title=<?= $article['sub_title'];?> &autor=<?= $autor;?> &date=<?= $article['created_at']; ?> &content=<?= $article['content']; ?>">
                                 <h2 class="post-title">
-                                    <?= $article['articleTitle']; ?>
+                                    <?= $article['title']; ?>
                                 </h2>
                                 <h3 class="post-subtitle">
-                                    <?= $article['textTitle']; ?>
+                                    <?= $article['sub_title']; ?>
                                 </h3>
                             </a>
                             <p class="post-meta">Posted by
-                                <a href="#"><?= $article['author']; ?></a>
-                                on <?= $article['date']; ?></p>
+                                <a href="#"><?= $autor; ?></a>
+                                on <?= $article['created_at']; ?></p>
                         </div>
                         <hr>
                     <?php endforeach; ?>
-
                 <?php else: ?>
                     <p>Products not found!!!</p>
                 <?php endif; ?>
-
                 <!-- Pager -->
                 <div class="clearfix">
                     <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>

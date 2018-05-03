@@ -62,36 +62,31 @@ function viewTitle()
 
 function getAutor()
 {
-    $posted = ['Harry', 'Oliver',
-        'Jack', 'Thomas', 'William',
-        'James', 'Amelia', 'Olivia',
-        'Jessica', 'Emily', 'Lily',
-        'Mia', 'Isabella'];
-
-    return $posted[random_int(0, count($posted) - 1)];
+    $autor = 'MrLelik';
+    return $autor;
 }
 
 
-function getDates()
-{
-    $randDay = random_int(0, 300);
-    return date('F d, Y', strtotime("-$randDay days"));
-}
+//function getDates()
+//{
+//    $randDay = random_int(0, 300);
+//    return date('F d, Y', strtotime("-$randDay days"));
+//}
 
 
-function getArticlesBlog()
-{
-    $arr = [];
-    for ($i = 1; $i <= 5; $i++) {
-        $arr[] = [
-            'articleTitle' => 'Some interesting article about something interesting ' . $i,
-            'textTitle' => 'The text is very, very interesting article ' . $i,
-            'author' => getAutor(),
-            'date' => getDates()
-        ];
-    }
-    return $arr;
-}
+//function getArticlesBlog()
+//{
+//    $arr = [];
+//    for ($i = 1; $i <= 5; $i++) {
+//        $arr[] = [
+//            'articleTitle' => 'Some interesting article about something interesting ' . $i,
+//            'textTitle' => 'The text is very, very interesting article ' . $i,
+//            'author' => getAutor(),
+//            'date' => getDates()
+//        ];
+//    }
+//    return $arr;
+//}
 
 function connectDb()
 {
@@ -124,6 +119,71 @@ function getArticles()
 
     return false;
 }
+
+function getSampleArticle()
+{
+    $db = connectDb();
+    if ($db) {
+        $sql = "SELECT * FROM articles";
+
+        return $db->query($sql)->fetch(PDO::FETCH_ASSOC);
+    }
+
+    return false;
+}
+
+function insertArticle($post)
+{
+    $title = ($post['title']) ? $post['title'] : null;
+    $subTitle = ($post['subtitle']) ? $post['subtitle'] : null;
+    $content = ($post['content']) ? $post['content'] : null;
+    $date = date('F d, Y');
+
+    $db = connectDb();
+
+    if ($db) {
+        $sql = "INSERT INTO articles (title, sub_title, content, created_at) VALUES ( :title, :sub_title,:content, :created_at )";
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(':title', $title, PDO::PARAM_STR);
+        $stmt->bindParam(':sub_title', $subTitle, PDO::PARAM_STR);
+        $stmt->bindParam(':content', $content, PDO::PARAM_STR);
+        $stmt->bindParam(':created_at', $date, PDO::PARAM_STR);
+        $stmt->execute();
+    }
+}
+
+function updateArticle($post)
+{
+    $title = ($post['title']) ? $post['title'] : null;
+    $subTitle = ($post['subtitle']) ? $post['subtitle'] : null;
+    $content = ($post['content']) ? $post['content'] : null;
+    $date = date('F d, Y');
+    $id = $_SESSION['change_id'];
+
+    $db = connectDb();
+
+    if ($db) {
+        $sql = "UPDATE articles SET title = :title, sub_title = :sub_title, content = :content, created_at = :created_at WHERE articles . id = :id";
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(':title', $title, PDO::PARAM_STR);
+        $stmt->bindParam(':sub_title', $subTitle, PDO::PARAM_STR);
+        $stmt->bindParam(':content', $content, PDO::PARAM_STR);
+        $stmt->bindParam(':created_at', $date, PDO::PARAM_STR);
+        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+        $stmt->execute();
+    }
+}
+
+function deleteArticle($id)
+{
+    $db = connectDb();
+    if ($db) {
+        $sql = "DELETE FROM articles WHERE id=$id";
+        return $db->prepare($sql)->execute();
+    }
+    return false;
+}
+
 
 //function viewTitle2()
 //{
