@@ -21,6 +21,9 @@
                     <a class="nav-link" href="contact.php">Contact</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="adminIndex.php">Admin Panel</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="/?logout">Exit</a>
                 </li>
             </ul>

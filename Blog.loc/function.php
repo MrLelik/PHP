@@ -60,7 +60,6 @@ function viewTitle()
 }
 
 
-
 function getAutor()
 {
     $posted = ['Harry', 'Oliver',
