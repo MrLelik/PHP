@@ -27,7 +27,7 @@ if (isset($_GET['changeID']) && !empty($_GET['changeID'])) {
                             <th>Login</th>
                             <th>Email</th>
                             <th>Role</th>
-                            <th>Salary</th>
+                            <th>Change Role</th>
                         </tr>
                         </thead>
                         <tfoot>
@@ -37,7 +37,7 @@ if (isset($_GET['changeID']) && !empty($_GET['changeID'])) {
                             <th>Login</th>
                             <th>Email</th>
                             <th>Role</th>
-                            <th>Salary</th>
+                            <th>Change Role</th>
                         </tr>
                         </tfoot>
                         <tbody>

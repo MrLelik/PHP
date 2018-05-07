@@ -24,6 +24,9 @@
                 <label>Content</label>
                 <textarea class="form-control" rows="10" placeholder="Content" name="content"></textarea>
             </div>
+            <div class="form-group">
+                <input type="hidden" name="authorAdd" value="<?= $_SESSION['authorID'];?>">
+            </div>
             <button type="submit" name="addArticle" class="btn btn-success">Add</button>
         </form>
     </div>

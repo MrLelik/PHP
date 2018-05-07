@@ -21,9 +21,9 @@
             <div class="col-lg-8 col-md-10 mx-auto">
                 <?php if (getArticles()): ?>
                     <?php foreach (getArticles() as $article): ?>
-                        <?php $autor = getAutor(); ?>
+                        <?php $author = getAuthor($article['author']); ?>
                         <div class="post-preview">
-                            <a href="samplePost.php?title=<?= $article['title'];?> &sub_title=<?= $article['sub_title'];?> &autor=<?= $autor;?> &date=<?= $article['created_at']; ?> &content=<?= $article['content']; ?>">
+                            <a href="samplePost.php?title=<?= $article['title'];?> &sub_title=<?= $article['sub_title'];?> &author=<?= $author['name'];?> &date=<?= $article['created_at']; ?> &content=<?= $article['content']; ?>">
                                 <h2 class="post-title">
                                     <?= $article['title']; ?>
                                 </h2>
@@ -32,7 +32,7 @@
                                 </h3>
                             </a>
                             <p class="post-meta">Posted by
-                                <a href="#"><?= $autor; ?></a>
+                                <a href="#"><?= $author['name']; ?></a>
                                 on <?= $article['created_at']; ?></p>
                         </div>
                         <hr>

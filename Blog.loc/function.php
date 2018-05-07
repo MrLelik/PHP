@@ -35,6 +35,16 @@ function getAllUsers()
     return false;
 }
 
+function getAuthor($id)
+{
+    $db = connectDb();
+    if ($db) {
+        $sql = "SELECT * FROM users WHERE id=$id";
+        return $db->query($sql)->fetch(PDO::FETCH_ASSOC);
+    }
+    return false;
+}
+
 function getSampleArticle()
 {
     $db = connectDb();
@@ -57,12 +67,13 @@ function insertArticle($post)
     $db = connectDb();
 
     if ($db) {
-        $sql = "INSERT INTO articles (title, sub_title, content, created_at) VALUES ( :title, :sub_title,:content, :created_at )";
+        $sql = "INSERT INTO articles (title, sub_title, content, created_at, author) VALUES ( :title, :sub_title,:content, :created_at, :author )";
         $stmt = $db->prepare($sql);
         $stmt->bindParam(':title', $title, PDO::PARAM_STR);
         $stmt->bindParam(':sub_title', $subTitle, PDO::PARAM_STR);
         $stmt->bindParam(':content', $content, PDO::PARAM_STR);
         $stmt->bindParam(':created_at', $date, PDO::PARAM_STR);
+        $stmt->bindParam(':author', $post['authorAdd'], PDO::PARAM_STR);
         $stmt->execute();
     }
 }
@@ -171,6 +182,7 @@ function validateFormLogin($post)
             $_SESSION['access'] = true;
             $_SESSION['userName'] = $trueUser['name'];
             $_SESSION['author'] = $trueUser['name'] . $trueUser['last_name'];
+            $_SESSION['authorID'] = $trueUser['id'];
             $_SESSION['role'] = $trueUser['role'];
             header('Location: /index.php');
             exit();

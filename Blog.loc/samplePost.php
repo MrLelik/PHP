@@ -11,7 +11,7 @@
                     <h1><?= $sampleArticle['title']; ?></h1>
                     <h2 class="subheading"><?= $sampleArticle['sub_title']; ?></h2>
                     <span class="meta">Posted by
-                <a href="#"><?= isset($sampleArticle['autor']) ? $sampleArticle['autor'] : getAutor(); ?></a>
+                <a href="#"><?= isset($sampleArticle['author']) ? $sampleArticle['author'] : getAutor(); ?></a>
                 on <?= isset($sampleArticle['date']) ? $sampleArticle['date'] : $sampleArticle['created_at']; ?></span>
                 </div>
             </div>
