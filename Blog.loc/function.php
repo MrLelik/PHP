@@ -23,6 +23,18 @@ function getArticles()
     return false;
 }
 
+function getAllUsers()
+{
+    $db = connectDb();
+    if ($db) {
+        $sql = "SELECT * FROM users";
+
+        return $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    return false;
+}
+
 function getSampleArticle()
 {
     $db = connectDb();
@@ -158,7 +170,8 @@ function validateFormLogin($post)
             $_SESSION['error_message'] = false;
             $_SESSION['access'] = true;
             $_SESSION['userName'] = $trueUser['name'];
-            $_SESSION['userLastName'] = $trueUser['last_name'];
+            $_SESSION['author'] = $trueUser['name'] . $trueUser['last_name'];
+            $_SESSION['role'] = $trueUser['role'];
             header('Location: /index.php');
             exit();
 
@@ -209,5 +222,20 @@ function validateFormRegister($post)
         exit();
     } else {
         $_SESSION['error_message'] = 'Register user not complete';
+    }
+}
+
+function changeRole($data)
+{
+    $db = connectDb();
+
+    if ($db) {
+        $sql = "UPDATE users SET role = :role WHERE users . id = :id";
+
+        $stmt = $db->prepare($sql);
+
+        $stmt->bindParam(':role', $data['flag'], PDO::PARAM_STR);
+        $stmt->bindParam(':id', $data['changeID'], PDO::PARAM_STR);
+        $stmt->execute();
     }
 }

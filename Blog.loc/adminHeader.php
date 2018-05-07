@@ -6,6 +6,11 @@ if (!isset($_SESSION['access']) || !$_SESSION['access']) {
     exit();
 }
 
+if ($_SESSION['role'] !== 'admin') {
+    header('Location: /index.php');
+    exit();
+}
+
 if (isset($_POST['addArticle'])) {
     insertArticle($_POST);
     unset($_POST['addArticle']);
@@ -43,6 +48,9 @@ if (isset($_POST['changeArticle'])) {
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- Custom fonts for this template-->
     <link href="vendor/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <!-- Page level plugin CSS-->
+    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <!-- Custom styles for this template-->
     <link href="css/sb-admin.css" rel="stylesheet">
 </head>
 
@@ -79,6 +87,12 @@ if (isset($_POST['changeArticle'])) {
                 <a class="nav-link" href="adminDeleteArticle.php">
                     <i class="fa fa-minus-square-o"></i>
                     <span class="nav-link-text">Delete Article</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link" href="adminChangeRole.php">
+                    <i class="fa fa-users"></i>
+                    <span class="nav-link-text">Change Role Users</span>
                 </a>
             </li>
         </ul>

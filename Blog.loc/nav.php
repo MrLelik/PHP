@@ -24,7 +24,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contact.php">Contact</a>
                 </li>
-                <?php if (isset($_SESSION['access']) && $_SESSION['access']): ?>
+                <?php if (isset($_SESSION['access']) && $_SESSION['access'] && $_SESSION['role'] == 'admin'): ?>
                     <li class="nav-item">
                         <a class="nav-link" href="adminIndex.php">Admin Panel</a>
                     </li>
