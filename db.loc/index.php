@@ -15,8 +15,14 @@ require_once 'db.php';
 <div>
     <pre>
         <?php
-        $arr = getArticles();
-        print_r($arr);
+        $result = getUser('lelik');
+        if (count($result) == 0) {
+            echo 'массив пуст';
+        } else {
+            var_dump($result);
+            echo $result['name'];
+            echo $result['password'];
+        }
         ?>
     </pre>
 </div>

@@ -1,63 +1,8 @@
 <?php
 session_start();
 
-const LOGIN = 'lelik';
-const PASSWORD = 'qqq';
-
-function login(array $post)
-{
-    $check = null;
-
-    if (isset($post['login']) && isset($post['password'])) {
-        if ($post['login'] == LOGIN && md5($post['password']) == md5(PASSWORD)) {
-            $check = true;
-        }
-    }
-
-    if ($check) {
-        $_SESSION['access'] = true;
-        $_SESSION['login'] = $post['login'];
-        header('Location: /');
-        exit();
-    } else {
-        $_SESSION['access'] = false;
-        header('Location: /login.php');
-        exit();
-    }
-}
-
-function viewTitle()
-{
-    $titleHome = 'Custom Blog';
-    $titleAbout = 'Custom Blog - About';
-    $titleSamplePost = 'Custom Blog - Post';
-    $titleContact = 'Custom Blog - Contact';
-    $titleLogin = 'Custom Blog - Login';
-
-    switch ($_SERVER['REQUEST_URI']) {
-        case '/':
-            echo $titleHome;
-            break;
-        case '/login.php':
-            echo $titleLogin;
-            break;
-        case '/index.php':
-            echo $titleHome;
-            break;
-        case '/about.php':
-            echo $titleAbout;
-            break;
-        case '/samplePost.php':
-            echo $titleSamplePost;
-            break;
-        case '/contact.php':
-            echo $titleContact;
-            break;
-        default:
-            echo 'Default case';
-            break;
-    }
-}
+require_once 'viewTitleFunction.php';
+require_once 'dbConnectFunction.php';
 
 
 function getAutor()
@@ -65,48 +10,6 @@ function getAutor()
     $autor = 'MrLelik';
     return $autor;
 }
-
-
-//function getDates()
-//{
-//    $randDay = random_int(0, 300);
-//    return date('F d, Y', strtotime("-$randDay days"));
-//}
-
-
-//function getArticlesBlog()
-//{
-//    $arr = [];
-//    for ($i = 1; $i <= 5; $i++) {
-//        $arr[] = [
-//            'articleTitle' => 'Some interesting article about something interesting ' . $i,
-//            'textTitle' => 'The text is very, very interesting article ' . $i,
-//            'author' => getAutor(),
-//            'date' => getDates()
-//        ];
-//    }
-//    return $arr;
-//}
-
-function connectDb()
-{
-    $driver = 'mysql';
-    $host = 'localhost';
-    $db_name = 'custom_blog';
-    $db_user = 'admin';
-    $db_pass = '123';
-    $charset = 'utf8';
-    $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
-
-    try {
-        $dbh = new PDO("$driver:host=$host;dbname=$db_name;charset=$charset", $db_user, $db_pass, $options);
-        return $dbh;
-    } catch (PDOException $e) {
-        print "Error!: " . $e->getMessage() . "<br/>";
-        return false;
-    }
-}
-
 
 function getArticles()
 {
@@ -184,17 +87,127 @@ function deleteArticle($id)
     return false;
 }
 
+function addUser($post)
+{
+    $db = connectDb();
 
-//function viewTitle2()
-//{
-//    $titleHome = 'Custom Blog';
-//    $titleAbout = 'Custom Blog - About';
-//    $titleSamplePost = 'Custom Blog - Post';
-//    $titleContact = 'Custom Blog - Contact';
-//
-//    if ($_SERVER['REQUEST_URI'] === '/') {
-//        echo $titleHome;
-//    } elseif (strpos($_SERVER['REQUEST_URI'], 'about' )) {
-//
-//    }
-//}
+    if ($db) {
+        $password = md5($post['pass']);
+        $sql = "INSERT INTO users (name, last_name, login, email, password, role)
+                VALUES ( :name, :last_name, :registLogin, :email, :password, :role)";
+
+        $stmt = $db->prepare($sql);
+
+        $stmt->bindParam(':name', $post['name'], PDO::PARAM_STR);
+        $stmt->bindParam(':last_name', $post['lastName'], PDO::PARAM_STR);
+        $stmt->bindParam(':registLogin', $post['registLogin'], PDO::PARAM_STR);
+        $stmt->bindParam(':email', $post['email'], PDO::PARAM_STR);
+        $stmt->bindParam(':password', $password, PDO::PARAM_STR);
+        $stmt->bindParam(':role', $post['role'], PDO::PARAM_STR);
+
+        return $stmt->execute();
+    }
+}
+
+function getUser($user)
+{
+    $db = connectDb();
+
+    if ($db) {
+        $sql = "SELECT * FROM users WHERE login = :login";
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(':login', $user, PDO::PARAM_STR);
+        $stmt->execute();
+
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+    return false;
+}
+
+
+function getErrorMessage()
+{
+    return isset($_SESSION['error_message']) ? $_SESSION['error_message'] : false;
+}
+
+
+function validateFormLogin($post)
+{
+    if (!isset($post['login']) || empty($post['login'])) {
+        $_SESSION['error_message'] = 'Login can not by empty';
+        return;
+    }
+
+    if (!isset($post['password']) || empty($post['password'])) {
+        $_SESSION['error_message'] = 'Password can not by empty';
+        return;
+    }
+
+    $user = htmlspecialchars($post['login']);
+    $user = trim($user);
+
+    $password = htmlspecialchars($post['password']);
+    $password = md5($password);
+
+    if (getUser($user)) {
+
+        $trueUser = getUser($user);
+
+        if ($password == $trueUser['password']) {
+
+            $_SESSION['error_message'] = false;
+            $_SESSION['access'] = true;
+            $_SESSION['userName'] = $trueUser['name'];
+            $_SESSION['userLastName'] = $trueUser['last_name'];
+            header('Location: /index.php');
+            exit();
+
+        } else {
+            $_SESSION['error_message'] = 'Wrong password';
+            $_SESSION['access'] = false;
+        }
+
+    } else {
+        $_SESSION['error_message'] = 'Login not found';
+        $_SESSION['access'] = false;
+    }
+}
+
+function validateFormRegister($post)
+{
+    $_SESSION['success_registration'] = false;
+
+    if ($post['pass'] !== $post['repeatPass']) {
+        $_SESSION['error_message'] = 'Inputted password not confirm';
+        return;
+    }
+
+    if (!isset($post['registLogin']) || empty($post['registLogin'])) {
+        $_SESSION['error_message'] = 'Login can not by empty';
+        return;
+    }
+
+    if (!isset($post['email']) || empty($post['email'])) {
+        $_SESSION['error_message'] = 'Login can not by empty';
+        return;
+    }
+
+    $post['name'] = htmlspecialchars($post['name']);
+    $post['name'] = trim($post['name']);
+    $post['lastName'] = htmlspecialchars($post['lastName']);
+    $post['lastName'] = trim($post['lastName']);
+    $post['registLogin'] = htmlspecialchars($post['registLogin']);
+    $post['registLogin'] = trim($post['registLogin']);
+    $post['email'] = htmlspecialchars($post['email']);
+    $post['email'] = trim($post['email']);
+    $post['pass'] = htmlspecialchars($post['pass']);
+    $post['pass'] = trim($post['pass']);
+
+    if (addUser($post)) {
+        $_SESSION['error_message'] = false;
+        header('Location: /register.php');
+        exit();
+    } else {
+        $_SESSION['error_message'] = 'Register user not complete';
+    }
+}

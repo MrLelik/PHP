@@ -7,10 +7,6 @@ if (isset($_GET) && key_exists('logout', $_GET)) {
     exit();
 }
 
-if (!isset($_SESSION['access']) && !$_SESSION['access']) {
-    header('Location: /login.php');
-    exit();
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">

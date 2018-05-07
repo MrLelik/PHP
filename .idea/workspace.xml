@@ -5,17 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e3c5629-4329-4c87-8b00-1a435bf887dc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Blog.loc/adminChangeSampleArticle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog.loc/dbConnectFunction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog.loc/register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog.loc/viewTitleFunction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog.loc/adminAddArticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/Blog.loc/adminAddArticle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog.loc/adminChangeArticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/Blog.loc/adminChangeArticle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog.loc/adminDeleteArticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/Blog.loc/adminDeleteArticle.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog.loc/adminHeader.php" beforeDir="false" afterPath="$PROJECT_DIR$/Blog.loc/adminHeader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog.loc/adminIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/Blog.loc/adminIndex.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog.loc/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/Blog.loc/function.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog.loc/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Blog.loc/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blog.loc/samplePost.php" beforeDir="false" afterPath="$PROJECT_DIR$/Blog.loc/samplePost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog.loc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Blog.loc/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog.loc/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Blog.loc/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog.loc/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/Blog.loc/nav.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.loc/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.loc/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.loc/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.loc/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,47 +40,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="adminIndex.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blog.loc/adminIndex.php">
+      <file leaf-file-name="function.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Blog.loc/function.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="19" column="248" selection-start-line="19" selection-start-column="248" selection-end-line="19" selection-end-column="248" />
+            <state relative-caret-position="3374">
+              <caret line="208" column="15" selection-start-line="208" selection-start-column="15" selection-end-line="208" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminDeleteArticle.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blog.loc/adminDeleteArticle.php">
+      <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blog.loc/register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adminHeader.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Blog.loc/adminHeader.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blog.loc/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="12" column="1" lean-forward="true" selection-start-line="9" selection-end-line="12" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adminChangeArticle.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blog.loc/adminChangeArticle.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
-              <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+            <state relative-caret-position="364">
+              <caret line="74" column="72" lean-forward="true" selection-start-line="74" selection-start-column="72" selection-end-line="74" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -93,11 +66,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test.loc/access_denied.php" />
-        <option value="$PROJECT_DIR$/test.loc/function.php" />
-        <option value="$PROJECT_DIR$/test.loc/singleArticle.php" />
-        <option value="$PROJECT_DIR$/sourceit.loc/index.php" />
-        <option value="$PROJECT_DIR$/mysite.loc/logout.php" />
         <option value="$PROJECT_DIR$/test.loc/blog.php" />
         <option value="$PROJECT_DIR$/test.loc/functionBlog.php" />
         <option value="$PROJECT_DIR$/mysite.loc/functionScore.php" />
@@ -129,21 +97,26 @@
         <option value="$PROJECT_DIR$/Blog.loc/footer.php" />
         <option value="$USER_HOME$/Загрузки/startbootstrap-sb-admin-gh-pages/index.html" />
         <option value="$PROJECT_DIR$/test.loc/index.html" />
-        <option value="$PROJECT_DIR$/Blog.loc/header.php" />
         <option value="$PROJECT_DIR$/Blog.loc/adminFooter.php" />
-        <option value="$PROJECT_DIR$/Blog.loc/nav.php" />
         <option value="$PROJECT_DIR$/test.loc/.gitignore" />
-        <option value="$PROJECT_DIR$/db.loc/index.php" />
         <option value="$PROJECT_DIR$/Blog.loc/index.php" />
-        <option value="$PROJECT_DIR$/db.loc/db.php" />
         <option value="$PROJECT_DIR$/Blog.loc/samplePost.php" />
         <option value="$PROJECT_DIR$/Blog.loc/adminAddArticle.php" />
         <option value="$PROJECT_DIR$/Blog.loc/adminChangeArticle.php" />
         <option value="$PROJECT_DIR$/Blog.loc/adminChangeSampleArticle.php" />
-        <option value="$PROJECT_DIR$/Blog.loc/function.php" />
         <option value="$PROJECT_DIR$/Blog.loc/adminIndex.php" />
         <option value="$PROJECT_DIR$/Blog.loc/adminDeleteArticle.php" />
+        <option value="$PROJECT_DIR$/Blog.loc/viewTitle.php" />
+        <option value="$PROJECT_DIR$/Blog.loc/dbConnect.php" />
+        <option value="$PROJECT_DIR$/Blog.loc/dbConnectFunction.php" />
+        <option value="$PROJECT_DIR$/db.loc/db.php" />
+        <option value="$PROJECT_DIR$/db.loc/index.php" />
+        <option value="$PROJECT_DIR$/Blog.loc/nav.php" />
+        <option value="$PROJECT_DIR$/Blog.loc/header.php" />
         <option value="$PROJECT_DIR$/Blog.loc/adminHeader.php" />
+        <option value="$PROJECT_DIR$/Blog.loc/login.php" />
+        <option value="$PROJECT_DIR$/Blog.loc/register.php" />
+        <option value="$PROJECT_DIR$/Blog.loc/function.php" />
       </list>
     </option>
   </component>
@@ -167,7 +140,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,6 +171,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -301,11 +274,16 @@
       <workItem from="1525344406156" duration="10738000" />
       <workItem from="1525367619637" duration="18061000" />
       <workItem from="1525390045147" duration="80000" />
+      <workItem from="1525390142657" duration="1126000" />
+      <workItem from="1525448085778" duration="8340000" />
+      <workItem from="1525458829474" duration="392000" />
+      <workItem from="1525632761867" duration="1181000" />
+      <workItem from="1525633961982" duration="17546000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="294588000" />
+    <option name="totallyTimeSpent" value="323173000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -320,7 +298,7 @@
     <frame x="-1" y="26" width="1922" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4950386" visible="true" weight="0.15085287" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4950386" visible="true" weight="0.15884861" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -348,24 +326,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Blog.loc/adminChangeArticle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog.loc/adminDeleteArticle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite.loc/order.php" />
-    <entry file="file://$PROJECT_DIR$/mysite.loc/orderMail.php" />
-    <entry file="file://$PROJECT_DIR$/mysite.loc/feedbackMail.php" />
-    <entry file="file://$PROJECT_DIR$/mysite.loc/feedback.php" />
     <entry file="file://$PROJECT_DIR$/mysite.loc/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -533,27 +493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blog.loc/nav.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db.loc/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db.loc/db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="32" column="1" lean-forward="true" selection-start-line="22" selection-end-line="32" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sourceit.loc/tasks/task6/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-468" />
@@ -594,45 +533,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blog.loc/samplePost.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog.loc/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="25" column="217" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="217" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog.loc/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog.loc/adminChangeSampleArticle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="48" lean-forward="true" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Blog.loc/adminIndex.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="19" column="248" selection-start-line="19" selection-start-column="248" selection-end-line="19" selection-end-column="248" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog.loc/adminChangeArticle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -643,17 +547,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blog.loc/header.php">
+    <entry file="file://$PROJECT_DIR$/Blog.loc/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="9" selection-end-line="12" selection-end-column="1" />
+        <state relative-caret-position="1326">
+          <caret line="51" column="35" lean-forward="true" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog.loc/samplePost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-148">
+          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog.loc/adminChangeSampleArticle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog.loc/viewTitleFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="788">
+          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog.loc/adminChangeArticle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="788">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog.loc/dbConnectFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog.loc/css/clean-blog.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9620">
+          <caret line="406" column="28" lean-forward="true" selection-start-line="406" selection-start-column="28" selection-end-line="406" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog.loc/nav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="806">
+          <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.loc/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="34" column="17" lean-forward="true" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.loc/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog.loc/contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-474" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog.loc/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="3" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blog.loc/adminHeader.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog.loc/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog.loc/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="74" column="72" lean-forward="true" selection-start-line="74" selection-start-column="72" selection-end-line="74" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog.loc/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3374">
+          <caret line="208" column="15" selection-start-line="208" selection-start-column="15" selection-end-line="208" selection-end-column="15" />
         </state>
       </provider>
     </entry>

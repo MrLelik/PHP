@@ -18,19 +18,3 @@ function connectDb()
         return false;
     }
 }
-
-
-function getUser($user)
-{
-    $db = connectDb();
-
-    if ($db) {
-        $sql = "SELECT * FROM users WHERE login = :login";
-        $stmt = $db->prepare($sql);
-        $stmt->bindParam(':login', $user, PDO::PARAM_STR);
-        $stmt->execute();
-
-        return $stmt->fetch(PDO::FETCH_ASSOC);
-    }
-    return false;
-}
