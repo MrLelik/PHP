@@ -1,10 +1,10 @@
-<?php require_once 'adminHeader.php'; ?>
+<?php require_once 'header.php'; ?>
 <?php
 if (isset($_GET['changeID']) && !empty($_GET['changeID'])) {
     changeRole($_GET);
     unset($_GET['changeID']);
     unset($_GET['flag']);
-    header('Location: /adminChangeRole.php');
+    header('Location: /admin/changeRole.php');
     exit();
 }
 ?>
@@ -15,7 +15,7 @@ if (isset($_GET['changeID']) && !empty($_GET['changeID'])) {
 
         <div class="card mb-3">
             <div class="card-header">
-                <i class="fa fa-users"></i> All Users
+                <i class="fa fa-users"></i> <?= getCountTable('users'); ?> Users
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -50,10 +50,10 @@ if (isset($_GET['changeID']) && !empty($_GET['changeID'])) {
                                     <td><?= $user['email']; ?></td>
                                     <td><?= $user['role']; ?></td>
                                     <?php if ($user['role'] == 'user'): ?>
-                                        <td><a href="adminChangeRole.php?changeID=<?= $user['id'];?>&flag=admin">Change to Admin</a>
+                                        <td><a href="changeRole.php?changeID=<?= $user['id'];?>&flag=admin">Change to Admin</a>
                                         </td>
                                     <?php else: ?>
-                                        <td><a href="adminChangeRole.php?changeID=<?= $user['id'];?>&flag=user">Change to User</a>
+                                        <td><a href="changeRole.php?changeID=<?= $user['id'];?>&flag=user">Change to User</a>
                                         </td>
                                     <?php endif; ?>
                                 </tr>
@@ -73,4 +73,4 @@ if (isset($_GET['changeID']) && !empty($_GET['changeID'])) {
 
 <!-- /.container-fluid-->
 <!-- /.content-wrapper-->
-<?php require_once 'adminFooter.php'; ?>
+<?php require_once 'footer.php'; ?>

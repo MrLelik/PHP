@@ -26,13 +26,13 @@
                 </li>
                 <?php if (isset($_SESSION['access']) && $_SESSION['access'] && $_SESSION['role'] == 'admin'): ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="adminIndex.php">Admin Panel</a>
+                        <a class="nav-link" href="admin/main.php">Admin Panel</a>
                     </li>
                 <?php endif; ?>
                 <?php if (!isset($_SESSION['access']) || !$_SESSION['access']): ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.php">Log in</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">Log in</a>
+                    </li>
                 <?php endif; ?>
                 <?php if (isset($_SESSION['access']) && $_SESSION['access']): ?>
                     <li class="nav-item">
@@ -42,4 +42,12 @@
             </ul>
         </div>
     </div>
+    <form action="" method="post" id="search-block-form">
+        <div class="form-item">
+            <input type="text" name="words" value="" maxlength="128" placeholder="Найти...">
+        </div>
+        <div class="form-actions">
+            <input type="submit" name="go" value="Поиск" class="form-submit">
+        </div>
+    </form>
 </nav>

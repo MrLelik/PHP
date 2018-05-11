@@ -1,17 +1,17 @@
-<?php require_once 'adminHeader.php'; ?>
+<?php require_once 'header.php';?>
 
 <div class="content-wrapper">
     <div class="container-fluid">
+        <!--        Articles-->
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <!--<a href="#">Add title</a>-->
-                <i class="fa fa-pencil-square-o"></i> Change Article
+                    <i class="fa fa-minus-square-o"></i> Delete Articles
             </li>
         </ol>
 
         <div class="card mb-3">
             <div class="card-header">
-                <i class="fa fa-newspaper-o"></i> All Articles
+                <i class="fa fa-newspaper-o"></i> <?= getCountTable('articles'); ?> Articles
             </div>
             <div class="list-group list-group-flush small">
                 <?php if (getArticles()): ?>
@@ -28,7 +28,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a class="btn btn-info" href="adminChangeSampleArticle.php?title=<?= $article['title'];?> &sub_title=<?= $article['sub_title'];?> &content=<?= $article['content'];?> &change_id=<?= $article['id'];?>">Change</a>
+                        <a class="btn btn-warning" href="deleteArticle.php?id=<?= $article['id']; ?>">Delete</a>
                     <?php endforeach; ?>
                 <?php else: ?>
                     <p>Articles not found!</p>
@@ -41,4 +41,4 @@
 
 <!-- /.container-fluid-->
 <!-- /.content-wrapper-->
-<?php require_once 'adminFooter.php'; ?>
+<?php require_once 'footer.php';?>

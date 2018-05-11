@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 function connectDb()
 {
     $driver = 'mysql';
@@ -34,3 +34,31 @@ function getUser($user)
     }
     return false;
 }
+
+function getCountTable($table)
+{
+    $db = connectDb();
+
+    if ($db) {
+        $sql = "SELECT COUNT(*) as count FROM $table";
+
+        return $db->query($sql)->fetchColumn();
+    }
+}
+
+function search($words)
+{
+    $db = connectDb();
+
+    if ($db) {
+        $sql = "SELECT * FROM articles WHERE CONCAT (title , sub_title , content) LIKE :words";
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':words', '%'.$words.'%', PDO::PARAM_STR);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    return false;
+}
+
+//$members=$dbh->query("SELECT COUNT(*) as count FROM users")->fetchColumn();

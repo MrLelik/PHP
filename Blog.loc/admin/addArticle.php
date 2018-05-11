@@ -1,4 +1,4 @@
-<?php require_once 'adminHeader.php'; ?>
+<?php require_once 'header.php'; ?>
 
 <div class="content-wrapper">
     <div class="container-fluid">
@@ -35,4 +35,4 @@
 
 <!-- /.container-fluid-->
 <!-- /.content-wrapper-->
-<?php require_once 'adminFooter.php'; ?>
+<?php require_once 'footer.php'; ?>

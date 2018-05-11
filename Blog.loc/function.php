@@ -7,8 +7,7 @@ require_once 'dbConnectFunction.php';
 
 function getAutor()
 {
-    $autor = 'MrLelik';
-    return $autor;
+    return $_SESSION['author'];
 }
 
 function getArticles()
@@ -63,19 +62,84 @@ function insertArticle($post)
     $subTitle = ($post['subtitle']) ? $post['subtitle'] : null;
     $content = ($post['content']) ? $post['content'] : null;
     $date = date('F d, Y');
+    $url = getUrl($post['title']);
 
     $db = connectDb();
 
     if ($db) {
-        $sql = "INSERT INTO articles (title, sub_title, content, created_at, author) VALUES ( :title, :sub_title,:content, :created_at, :author )";
+        $sql = "INSERT INTO articles (title, sub_title, content, created_at, author, url) 
+                VALUES ( :title, :sub_title,:content, :created_at, :author, :url )";
         $stmt = $db->prepare($sql);
         $stmt->bindParam(':title', $title, PDO::PARAM_STR);
         $stmt->bindParam(':sub_title', $subTitle, PDO::PARAM_STR);
         $stmt->bindParam(':content', $content, PDO::PARAM_STR);
         $stmt->bindParam(':created_at', $date, PDO::PARAM_STR);
         $stmt->bindParam(':author', $post['authorAdd'], PDO::PARAM_STR);
+        $stmt->bindParam(':url', $url, PDO::PARAM_STR);
         $stmt->execute();
     }
+}
+
+function getUrl($str)
+{
+    $articleUrl = str_replace(' ', '-', $str);
+    $articleUrl = transliteration($articleUrl);
+    $articleIsset = getArticleByUrl($articleUrl);
+    if (!$articleIsset) {
+        return $articleUrl;
+    } else {
+        $url = $articleIsset['url'];
+        $exUrl = explode('-', $url);
+        if ($exUrl){
+            $temp = (int)end($exUrl);
+            $newUrl = $exUrl[0] . '-'. ++$temp;
+        } else {
+            $temp = 0;
+            $newUrl = $articleUrl . '-'. ++$temp;
+        }
+        return getUrl($newUrl);
+    }
+}
+
+function transliteration($str)
+{
+    $st = strtr($str,
+        array(
+            'а'=>'a','б'=>'b','в'=>'v','г'=>'g','д'=>'d',
+            'е'=>'e','ё'=>'e','ж'=>'zh','з'=>'z','и'=>'i',
+            'к'=>'k','л'=>'l','м'=>'m','н'=>'n','о'=>'o',
+            'п'=>'p','р'=>'r','с'=>'s','т'=>'t','у'=>'u',
+            'ф'=>'ph','х'=>'h','ы'=>'y','э'=>'e','ь'=>'',
+            'ъ'=>'','й'=>'y','ц'=>'c','ч'=>'ch', 'ш'=>'sh',
+            'щ'=>'sh','ю'=>'yu','я'=>'ya',' '=>'_', '<'=>'_',
+            '>'=>'_', '?'=>'_', '"'=>'_', '='=>'_', '/'=>'_',
+            '|'=>'_'
+        )
+    );
+    $st2 = strtr($st,
+        array(
+            'А'=>'a','Б'=>'b','В'=>'v','Г'=>'g','Д'=>'d',
+            'Е'=>'e','Ё'=>'e','Ж'=>'zh','З'=>'z','И'=>'i',
+            'К'=>'k','Л'=>'l','М'=>'m','Н'=>'n','О'=>'o',
+            'П'=>'p','Р'=>'r','С'=>'s','Т'=>'t','У'=>'u',
+            'Ф'=>'ph','Х'=>'h','Ы'=>'y','Э'=>'e','Ь'=>'',
+            'Ъ'=>'','Й'=>'y','Ц'=>'c','Ч'=>'ch', 'Ш'=>'sh',
+            'Щ'=>'sh','Ю'=>'yu','Я'=>'ya'
+        )
+    );
+    $translit = $st2;
+    return $translit;
+}
+
+function getArticleByUrl($str)
+{
+    $db = connectDb();
+    if ($db) {
+        $sql = "SELECT * FROM articles WHERE url='$str'";
+
+        return $db->query($sql)->fetch(PDO::FETCH_ASSOC);
+    }
+    return false;
 }
 
 function updateArticle($post)
@@ -147,12 +211,10 @@ function getUser($user)
     return false;
 }
 
-
 function getErrorMessage()
 {
     return isset($_SESSION['error_message']) ? $_SESSION['error_message'] : false;
 }
-
 
 function validateFormLogin($post)
 {
@@ -181,7 +243,7 @@ function validateFormLogin($post)
             $_SESSION['error_message'] = false;
             $_SESSION['access'] = true;
             $_SESSION['userName'] = $trueUser['name'];
-            $_SESSION['author'] = $trueUser['name'] . $trueUser['last_name'];
+            $_SESSION['author'] = $trueUser['name'] . ' ' . $trueUser['last_name'];
             $_SESSION['authorID'] = $trueUser['id'];
             $_SESSION['role'] = $trueUser['role'];
             header('Location: /index.php');
@@ -250,4 +312,30 @@ function changeRole($data)
         $stmt->bindParam(':id', $data['changeID'], PDO::PARAM_STR);
         $stmt->execute();
     }
+}
+
+function getCountTable($table)
+{
+    $db = connectDb();
+
+    if ($db) {
+        $sql = "SELECT COUNT(*) as count FROM $table";
+
+        return $db->query($sql)->fetchColumn();
+    }
+}
+
+function search($words)
+{
+    $db = connectDb();
+
+    if ($db) {
+        $sql = "SELECT * FROM articles WHERE CONCAT (title , sub_title , content) LIKE :words";
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':words', '%'.$words.'%', PDO::PARAM_STR);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    return false;
 }
