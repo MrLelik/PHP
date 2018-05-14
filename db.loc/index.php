@@ -90,6 +90,7 @@ if (isset($_POST['go'])) {
 //        unset($_SESSION['key']);
 //        var_dump($_SESSION);
 //        echo ($_SESSION) ? 'yes' : 'No';
+        phpinfo();
         $result = search('test');
         var_dump($result);
         ?>
