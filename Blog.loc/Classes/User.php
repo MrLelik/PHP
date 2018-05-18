@@ -9,19 +9,17 @@ class User
 	public $lastName;
 	public $login;
 	public $email;
-	public $password;
 	public $role;
 
-	public function __construct($data)
+	public function __construct($dataObj)
 	{
-		$this->name = $data['name'];
-		$this->lastName = $data['lastName'];
-		$this->login = $data['registLogin'];
-		$this->email = $data['email'];
-		$this->password = $data['pass'];
-		$this->role = $data['role'];
+		$this->name = $dataObj->name;
+		$this->lastName = $dataObj->last_name;
+		$this->login = $dataObj->login;
+		$this->email = $dataObj->email;
+		$this->role = $dataObj->role;
 		echo 'Hi i User Blog' . '<pre>';
-		var_dump($data);
+		var_dump($dataObj);
 	}
 
 

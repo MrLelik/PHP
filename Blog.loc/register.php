@@ -4,14 +4,17 @@
 use Classes\UserTools;
 use Classes\User;
 
+//var_dump($_SESSION['error_message']);
+
 if (isset($_SESSION['access']) && $_SESSION['access']) {
     header('Location: /');
     exit();
 }
 
 if (isset($_POST['register'])) {
-	if (UserTools::validateFormRegister($_POST)) {
-		$newUser = new User(UserTools::clean($_POST));
+	$userObj = UserTools::validateFormRegister($_POST);
+	if ($userObj) {
+		$newUser = new User($userObj);
 	}
 }
 

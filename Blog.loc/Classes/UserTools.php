@@ -6,36 +6,99 @@ namespace Classes;
 abstract class UserTools
 {
 
+	public static function validateFormLogin($data)
+	{
+		if ( ! isset($data['login']) || empty($data['login'])) {
+			$_SESSION['error_message'] = 'Login can not by empty';
+
+			return false;
+		}
+
+		if ( ! isset($data['pass']) || empty($data['pass'])) {
+			$_SESSION['error_message'] = 'Password can not by empty';
+
+			return false;
+		}
+
+		return self::controlGetUser(self::clean($data));
+	}
+
+	public static function controlGetUser($data)
+	{
+		$userObj = ConnectDb::getUser($data['login']);
+
+		if ($userObj) {
+			if ($data['pass'] == $userObj->password) {
+				$_SESSION['error_message'] = false;
+//				$_SESSION['access'] = true;
+
+				return $userObj;
+			} else {
+				$_SESSION['error_message'] = 'Wrong password';
+//				$_SESSION['access'] = false;
+
+				return false;
+			}
+		} else {
+			$_SESSION['error_message'] = 'Login not found';
+
+//			$_SESSION['access'] = false;
+
+			return false;
+		}
+	}
+
 	public static function validateFormRegister($data)
 	{
-		$_SESSION['error_message'] = false;
 
 		if ($data['pass'] !== $data['repeatPass']) {
 			$_SESSION['error_message'] = 'Inputted password not confirm';
-			return;
+
+			return false;
 		}
 
-		if (!isset($data['registLogin']) || empty($data['registLogin'])) {
+		if ( ! isset($data['registLogin']) || empty($data['registLogin'])) {
 			$_SESSION['error_message'] = 'Login can not by empty';
-			return;
+
+			return false;
 		}
 
-		if (!isset($data['email']) || empty($data['email'])) {
+		if ( ! isset($data['email']) || empty($data['email'])) {
 			$_SESSION['error_message'] = 'Email can not by empty';
-			return;
+
+			return false;
 		}
 
 		if (ConnectDb::getUser($data['registLogin'])) {
 			$_SESSION['error_message'] = 'Login is not available';
-			return;
+
+			return false;
 		}
 
-		return true;
+		return self::controlAddUser(self::clean($data));
 	}
 
-	public static function getErrorMessage()
+	public static function controlAddUser($data)
 	{
-		return isset($_SESSION['error_message']) ? $_SESSION['error_message'] : false;
+		if (ConnectDb::addUser($data)) {
+			$_SESSION['error_message'] = false;
+
+			return ConnectDb::getUser($data['registLogin']);
+		} else {
+			$_SESSION['error_message'] = 'Register user not complete';
+
+			return false;
+		}
+	}
+
+	public static function clean($data)
+	{
+		$data         = array_map(function ($d) {
+			return stripcslashes(trim($d));
+		}, $data);
+		$data['pass'] = self::hash($data['pass']);
+
+		return $data;
 	}
 
 	public static function hash($value)
@@ -43,22 +106,9 @@ abstract class UserTools
 		return md5($value);
 	}
 
-	public static function clean($data)
+	public static function getErrorMessage()
 	{
-		$data = array_map(function ($d) {return stripcslashes(trim($d));}, $data);
-		$data['pass'] = self::hash($data['pass']);
-		return $data;
+		return isset($_SESSION['error_message']) ? $_SESSION['error_message']
+			: false;
 	}
 }
-
-
-//function validateFormRegister($post)
-//{
-//	if (addUser($post)) {
-//		$_SESSION['error_message'] = false;
-//		header('Location: /register.php');
-//		exit();
-//	} else {
-//		$_SESSION['error_message'] = 'Register user not complete';
-//	}
-//}

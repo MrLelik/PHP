@@ -31,12 +31,6 @@ spl_autoload_register(function ($class) {
 
 $articleManager = new Article(ConnectDb::getConnect());
 
-//function getArticles()
-
-//function getAutor()
-//{
-//	return $_SESSION['author'];
-//}
 
 function getAllUsers()
 {
@@ -190,27 +184,27 @@ function deleteArticle($id)
     return false;
 }
 
-function addUser($post)
-{
-    $db = ConnectDbtest::getConnect();
-
-    if ($db) {
-        $password = md5($post['pass']);
-        $sql = "INSERT INTO users (name, last_name, login, email, password, role)
-                VALUES ( :name, :last_name, :registLogin, :email, :password, :role)";
-
-        $stmt = $db->prepare($sql);
-
-        $stmt->bindParam(':name', $post['name'], PDO::PARAM_STR);
-        $stmt->bindParam(':last_name', $post['lastName'], PDO::PARAM_STR);
-        $stmt->bindParam(':registLogin', $post['registLogin'], PDO::PARAM_STR);
-        $stmt->bindParam(':email', $post['email'], PDO::PARAM_STR);
-        $stmt->bindParam(':password', $password, PDO::PARAM_STR);
-        $stmt->bindParam(':role', $post['role'], PDO::PARAM_STR);
-
-        return $stmt->execute();
-    }
-}
+//function addUser($post)
+//{
+//    $db = ConnectDbtest::getConnect();
+//
+//    if ($db) {
+//        $password = md5($post['pass']);
+//        $sql = "INSERT INTO users (name, last_name, login, email, password, role)
+//                VALUES ( :name, :last_name, :registLogin, :email, :password, :role)";
+//
+//        $stmt = $db->prepare($sql);
+//
+//        $stmt->bindParam(':name', $post['name'], PDO::PARAM_STR);
+//        $stmt->bindParam(':last_name', $post['lastName'], PDO::PARAM_STR);
+//        $stmt->bindParam(':registLogin', $post['registLogin'], PDO::PARAM_STR);
+//        $stmt->bindParam(':email', $post['email'], PDO::PARAM_STR);
+//        $stmt->bindParam(':password', $password, PDO::PARAM_STR);
+//        $stmt->bindParam(':role', $post['role'], PDO::PARAM_STR);
+//
+//        return $stmt->execute();
+//    }
+//}
 
 function getUser($user)
 {
@@ -225,11 +219,6 @@ function getUser($user)
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
     return false;
-}
-
-function getErrorMessage()
-{
-    return isset($_SESSION['error_message']) ? $_SESSION['error_message'] : false;
 }
 
 function validateFormLogin($post)
@@ -276,43 +265,7 @@ function validateFormLogin($post)
     }
 }
 
-function validateFormRegister($post)
-{
 
-    if ($post['pass'] !== $post['repeatPass']) {
-        $_SESSION['error_message'] = 'Inputted password not confirm';
-        return;
-    }
-
-    if (!isset($post['registLogin']) || empty($post['registLogin'])) {
-        $_SESSION['error_message'] = 'Login can not by empty';
-        return;
-    }
-
-    if (!isset($post['email']) || empty($post['email'])) {
-        $_SESSION['error_message'] = 'Login can not by empty';
-        return;
-    }
-
-    $post['name'] = htmlspecialchars($post['name']);
-    $post['name'] = trim($post['name']);
-    $post['lastName'] = htmlspecialchars($post['lastName']);
-    $post['lastName'] = trim($post['lastName']);
-    $post['registLogin'] = htmlspecialchars($post['registLogin']);
-    $post['registLogin'] = trim($post['registLogin']);
-    $post['email'] = htmlspecialchars($post['email']);
-    $post['email'] = trim($post['email']);
-    $post['pass'] = htmlspecialchars($post['pass']);
-    $post['pass'] = trim($post['pass']);
-
-    if (addUser($post)) {
-        $_SESSION['error_message'] = false;
-        header('Location: /register.php');
-        exit();
-    } else {
-        $_SESSION['error_message'] = 'Register user not complete';
-    }
-}
 
 function changeRole($data)
 {

@@ -1,13 +1,19 @@
 <?php require_once 'header.php'; ?>
 <?php
 
+use Classes\UserTools;
+use Classes\User;
+
 if (isset($_SESSION['access']) && $_SESSION['access']) {
     header('Location: /');
     exit();
 }
 
 if (isset($_POST['loginInBlog'])) {
-    validateFormLogin($_POST);
+    $userObj = UserTools::validateFormLogin($_POST);
+	if ($userObj) {
+		$newUser = new User($userObj);
+	}
 }
 
 ?>
@@ -30,9 +36,9 @@ if (isset($_POST['loginInBlog'])) {
 <div class="container">
     <div class="row">
         <div class="col-md-6 mx-auto">
-<!--            --><?php //if (getErrorMessage()): ?>
-<!--                <p style="color: red">--><?//= getErrorMessage(); ?><!--</p>-->
-<!--            --><?php //endif; ?>
+            <?php if (UserTools::getErrorMessage()): ?>
+                <p style="color: red"><?= UserTools::getErrorMessage(); ?></p>
+            <?php endif; ?>
             <form class="form-horizontal" role="form" method="post">
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Login</label>
@@ -43,7 +49,7 @@ if (isset($_POST['loginInBlog'])) {
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Password</label>
                     <div class="col-sm-12">
-                        <input type="password" class="form-control" name="password" placeholder="Password">
+                        <input type="password" class="form-control" name="pass" placeholder="Password">
                     </div>
                 </div>
                 <div class="form-group">

@@ -38,16 +38,40 @@ abstract class ConnectDb
 		);
 	}
 
-	public static function getUser($user)
+	public static function getUser($login)
 	{
 		$contact = self::getConnect();
+
 		if ($contact) {
 			$sql = "SELECT * FROM users WHERE login = :login";
 			$stmt = $contact->prepare($sql);
-			$stmt->bindParam(':login', $user, PDO::PARAM_STR);
+			$stmt->bindParam(':login', $login, PDO::PARAM_STR);
 			$stmt->execute();
 
 			return $stmt->fetch(PDO::FETCH_OBJ);
+		}
+
+		return false;
+	}
+
+	public static function addUser($data)
+	{
+		$contact = self::getConnect();
+
+		if ($contact) {
+			$sql = "INSERT INTO users (name, last_name, login, email, password, role)
+                VALUES ( :name, :last_name, :registLogin, :email, :password, :role)";
+
+			$stmt = $contact->prepare($sql);
+
+			$stmt->bindParam(':name', $data['name'], PDO::PARAM_STR);
+			$stmt->bindParam(':last_name', $data['lastName'], PDO::PARAM_STR);
+			$stmt->bindParam(':registLogin', $data['registLogin'], PDO::PARAM_STR);
+			$stmt->bindParam(':email', $data['email'], PDO::PARAM_STR);
+			$stmt->bindParam(':password', $data['pass'], PDO::PARAM_STR);
+			$stmt->bindParam(':role', $data['role'], PDO::PARAM_STR);
+
+			return $stmt->execute();
 		}
 
 		return false;
