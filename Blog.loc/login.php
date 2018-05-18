@@ -30,9 +30,9 @@ if (isset($_POST['loginInBlog'])) {
 <div class="container">
     <div class="row">
         <div class="col-md-6 mx-auto">
-            <?php if (getErrorMessage()): ?>
-                <p style="color: red"><?= getErrorMessage(); ?></p>
-            <?php endif; ?>
+<!--            --><?php //if (getErrorMessage()): ?>
+<!--                <p style="color: red">--><?//= getErrorMessage(); ?><!--</p>-->
+<!--            --><?php //endif; ?>
             <form class="form-horizontal" role="form" method="post">
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Login</label>

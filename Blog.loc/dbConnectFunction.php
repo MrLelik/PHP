@@ -1,6 +1,6 @@
 <?php
 
-function connectDb()
+function conn()
 {
     $driver = 'mysql';
     $host = 'localhost';

@@ -1,30 +1,46 @@
 <?php
+
+use Classes\ConnectDb;
+use Classes\Article;
+use Classes\UserTools;
+use Classes\User;
+
 session_start();
 
 require_once 'viewTitleFunction.php';
-require_once 'dbConnectFunction.php';
+//require_once 'dbConnectFunction.php';
 
+spl_autoload_register(function ($class) {
+	// project-specific namespace prefix
+	$prefix = 'Classes\\';
+	// base directory for the namespace prefix
+	$base_dir = __DIR__ . '/Classes/';
+	$len = strlen($prefix);
 
-function getAutor()
-{
-    return $_SESSION['author'];
-}
+	if (strncmp($prefix, $class, $len) !== 0) {
+		return;
+	}
 
-function getArticles()
-{
-    $db = connectDb();
-    if ($db) {
-        $sql = "SELECT * FROM articles";
+	$relative_class = substr($class, $len);
+	$file = $base_dir . str_replace('\\', '/', $relative_class) . '.php';
 
-        return $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-    }
+	if (file_exists($file)) {
+		require $file;
+	}
+});
 
-    return false;
-}
+$articleManager = new Article(ConnectDb::getConnect());
+
+//function getArticles()
+
+//function getAutor()
+//{
+//	return $_SESSION['author'];
+//}
 
 function getAllUsers()
 {
-    $db = connectDb();
+    $db = ConnectDbtest::getConnect();
     if ($db) {
         $sql = "SELECT * FROM users";
 
@@ -34,27 +50,27 @@ function getAllUsers()
     return false;
 }
 
-function getAuthor($id)
-{
-    $db = connectDb();
-    if ($db) {
-        $sql = "SELECT * FROM users WHERE id=$id";
-        return $db->query($sql)->fetch(PDO::FETCH_ASSOC);
-    }
-    return false;
-}
+//function getAuthor($id)
+//{
+//    $db = ConnectDbtest::getConnect();
+//    if ($db) {
+//        $sql = "SELECT * FROM users WHERE id=$id";
+//        return $db->query($sql)->fetch(PDO::FETCH_ASSOC);
+//    }
+//    return false;
+//}
 
-function getSampleArticle()
-{
-    $db = connectDb();
-    if ($db) {
-        $sql = "SELECT * FROM articles";
-
-        return $db->query($sql)->fetch(PDO::FETCH_ASSOC);
-    }
-
-    return false;
-}
+//function getSampleArticle()
+//{
+//    $db = ConnectDbtest::getConnect();
+//    if ($db) {
+//        $sql = "SELECT * FROM articles";
+//
+//        return $db->query($sql)->fetch(PDO::FETCH_ASSOC);
+//    }
+//
+//    return false;
+//}
 
 function insertArticle($post)
 {
@@ -64,7 +80,7 @@ function insertArticle($post)
     $date = date('F d, Y');
     $url = getUrl($post['title']);
 
-    $db = connectDb();
+    $db = ConnectDbtest::getConnect();
 
     if ($db) {
         $sql = "INSERT INTO articles (title, sub_title, content, created_at, author, url) 
@@ -133,7 +149,7 @@ function transliteration($str)
 
 function getArticleByUrl($str)
 {
-    $db = connectDb();
+    $db = ConnectDbtest::getConnect();
     if ($db) {
         $sql = "SELECT * FROM articles WHERE url='$str'";
 
@@ -150,7 +166,7 @@ function updateArticle($post)
     $date = date('F d, Y');
     $id = $_SESSION['change_id'];
 
-    $db = connectDb();
+    $db = ConnectDbtest::getConnect();
 
     if ($db) {
         $sql = "UPDATE articles SET title = :title, sub_title = :sub_title, content = :content, created_at = :created_at WHERE articles . id = :id";
@@ -166,7 +182,7 @@ function updateArticle($post)
 
 function deleteArticle($id)
 {
-    $db = connectDb();
+    $db = ConnectDbtest::getConnect();
     if ($db) {
         $sql = "DELETE FROM articles WHERE id=$id";
         return $db->prepare($sql)->execute();
@@ -176,7 +192,7 @@ function deleteArticle($id)
 
 function addUser($post)
 {
-    $db = connectDb();
+    $db = ConnectDbtest::getConnect();
 
     if ($db) {
         $password = md5($post['pass']);
@@ -198,7 +214,7 @@ function addUser($post)
 
 function getUser($user)
 {
-    $db = connectDb();
+    $db = ConnectDbtest::getConnect();
 
     if ($db) {
         $sql = "SELECT * FROM users WHERE login = :login";
@@ -262,7 +278,6 @@ function validateFormLogin($post)
 
 function validateFormRegister($post)
 {
-    $_SESSION['success_registration'] = false;
 
     if ($post['pass'] !== $post['repeatPass']) {
         $_SESSION['error_message'] = 'Inputted password not confirm';
@@ -301,7 +316,7 @@ function validateFormRegister($post)
 
 function changeRole($data)
 {
-    $db = connectDb();
+    $db = ConnectDbtest::getConnect();
 
     if ($db) {
         $sql = "UPDATE users SET role = :role WHERE users . id = :id";
@@ -316,7 +331,7 @@ function changeRole($data)
 
 function getCountTable($table)
 {
-    $db = connectDb();
+    $db = ConnectDbtest::getConnect();
 
     if ($db) {
         $sql = "SELECT COUNT(*) as count FROM $table";
@@ -327,7 +342,7 @@ function getCountTable($table)
 
 function search($words)
 {
-    $db = connectDb();
+    $db = ConnectDbtest::getConnect();
 
     if ($db) {
         $sql = "SELECT * FROM articles WHERE CONCAT (title , sub_title , content) LIKE :words";

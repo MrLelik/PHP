@@ -1,13 +1,18 @@
 <?php require_once 'header.php'; ?>
 <?php
 
+use Classes\UserTools;
+use Classes\User;
+
 if (isset($_SESSION['access']) && $_SESSION['access']) {
     header('Location: /');
     exit();
 }
 
 if (isset($_POST['register'])) {
-    validateFormRegister($_POST);
+	if (UserTools::validateFormRegister($_POST)) {
+		$newUser = new User(UserTools::clean($_POST));
+	}
 }
 
 ?>
@@ -30,8 +35,8 @@ if (isset($_POST['register'])) {
     <div class="container">
         <div class="row">
             <div class="col-md-6 mx-auto">
-                <?php if (getErrorMessage()): ?>
-                    <p style="color: red"><?= getErrorMessage(); ?></p>
+                <?php if (UserTools::getErrorMessage()): ?>
+                    <p style="color: red"><?= UserTools::getErrorMessage(); ?></p>
                 <?php endif; ?>
                 <form class="form-horizontal" role="form" method="post">
                     <div class="form-group">

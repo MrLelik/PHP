@@ -21,7 +21,7 @@
             <div class="col-lg-8 col-md-10 mx-auto">
                 <?php if (getArticles()): ?>
                     <?php foreach (getArticles() as $article): ?>
-                        <?php $author = getAuthor($article['author']); ?>
+                        <?php $author = $articleManager->getAuthor($article->author); ?>
                         <div class="post-preview">
                             <a href="samplePost.php?title=<?= $article['title'];?> &sub_title=<?= $article['sub_title'];?> &author=<?= $author['name'];?> &date=<?= $article['created_at']; ?> &content=<?= $article['content']; ?>">
                                 <h2 class="post-title">
