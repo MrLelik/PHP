@@ -18,8 +18,6 @@ class User
 		$this->login = $dataObj->login;
 		$this->email = $dataObj->email;
 		$this->role = $dataObj->role;
-		echo 'Hi i User Blog' . '<pre>';
-		var_dump($dataObj);
 	}
 
 

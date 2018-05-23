@@ -13,9 +13,9 @@ if (isset($_SESSION['access']) && $_SESSION['access']) {
 
 if (isset($_POST['register'])) {
 	$userObj = UserTools::validateFormRegister($_POST);
-	if ($userObj) {
-		$newUser = new User($userObj);
-	}
+//	if ($userObj) {
+//		$newUser = new User($userObj);
+//	}
 }
 
 ?>

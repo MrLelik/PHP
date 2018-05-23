@@ -12,7 +12,8 @@ if (isset($_SESSION['access']) && $_SESSION['access']) {
 if (isset($_POST['loginInBlog'])) {
     $userObj = UserTools::validateFormLogin($_POST);
 	if ($userObj) {
-		$newUser = new User($userObj);
+		header('Location: /');
+		exit();
 	}
 }
 

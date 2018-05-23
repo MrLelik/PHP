@@ -1,5 +1,4 @@
 <?php require_once 'header.php'; ?>
-
     <!-- Page Header -->
     <header class="masthead" style="background-image: url('img/home-bg.jpg')">
         <div class="overlay"></div>

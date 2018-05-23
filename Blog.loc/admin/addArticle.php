@@ -1,4 +1,12 @@
 <?php require_once 'header.php'; ?>
+<?php
+if (isset($_POST['addArticle'])) {
+	$articleManager->insertArticle($_POST);
+	unset($_POST['addArticle']);
+	header('Location: /admin/main.php');
+	exit();
+}
+?>
 
 <div class="content-wrapper">
     <div class="container-fluid">
@@ -25,12 +33,11 @@
                 <textarea class="form-control" rows="10" placeholder="Content" name="content"></textarea>
             </div>
             <div class="form-group">
-                <input type="hidden" name="authorAdd" value="<?= $_SESSION['authorID'];?>">
+
             </div>
             <button type="submit" name="addArticle" class="btn btn-success">Add</button>
         </form>
     </div>
-</div>
 </div>
 
 <!-- /.container-fluid-->

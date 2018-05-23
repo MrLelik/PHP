@@ -11,28 +11,6 @@ if ($_SESSION['role'] !== 'admin') {
     exit();
 }
 
-if (isset($_POST['addArticle'])) {
-    insertArticle($_POST);
-    unset($_POST['addArticle']);
-    header('Location: /admin/main.php');
-    exit();
-}
-
-if (isset($_GET['id']) && !empty($_GET['id'])) {
-    deleteArticle($_GET['id']);
-    unset($_GET['id']);
-    header('Location: /admin/deleteArticle.php');
-    exit();
-};
-
-if (isset($_POST['changeArticle'])) {
-    updateArticle($_POST);
-    unset($_POST['changeArticle']);
-    unset($_SESSION['change_id']);
-    header('Location: /admin/changeArticle.php');
-    exit();
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
         <?php if (isset($_SESSION['access']) && $_SESSION['access']): ?>
-            <a class="navbar-brand" href="/">Hello <?= $_SESSION['userName'] ?? ''; ?></a>
+            <a class="navbar-brand" href="/">Hello <?= $_SESSION['login'] ?? ''; ?></a>
         <?php endif; ?>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"

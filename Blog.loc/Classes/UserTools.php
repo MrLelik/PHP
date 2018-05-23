@@ -1,5 +1,6 @@
 <?php
 
+
 namespace Classes;
 
 
@@ -30,19 +31,23 @@ abstract class UserTools
 		if ($userObj) {
 			if ($data['pass'] == $userObj->password) {
 				$_SESSION['error_message'] = false;
-//				$_SESSION['access'] = true;
+
+				$_SESSION['access'] = true;
+				$_SESSION['role'] = $userObj->role;
+				$_SESSION['login'] = $userObj->login;
 
 				return $userObj;
 			} else {
 				$_SESSION['error_message'] = 'Wrong password';
-//				$_SESSION['access'] = false;
+
+				$_SESSION['access'] = false;
 
 				return false;
 			}
 		} else {
 			$_SESSION['error_message'] = 'Login not found';
 
-//			$_SESSION['access'] = false;
+			$_SESSION['access'] = false;
 
 			return false;
 		}

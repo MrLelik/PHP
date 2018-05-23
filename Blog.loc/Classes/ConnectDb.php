@@ -76,4 +76,17 @@ abstract class ConnectDb
 
 		return false;
 	}
+
+	public static function getCountTable($table)
+	{
+		$contact = self::getConnect();
+
+		if ($contact) {
+			$sql = "SELECT COUNT(*) as count FROM $table";
+
+			return $contact->query($sql)->fetchColumn();
+		}
+
+		return false;
+	}
 }
