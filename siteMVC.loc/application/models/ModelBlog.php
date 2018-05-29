@@ -6,7 +6,7 @@ class ModelBlog extends Model
     {
         $data = null;
         try {
-            $data = $this->connect()->query("SELECT * FROM articles")->fetchAll(PDO::FETCH_OBJ);
+            $data = $this->connect()->query("SELECT * FROM articles INNER JOIN users ON articles.author = users.id")->fetchAll(PDO::FETCH_OBJ);
         } catch (Exception $ex) {
             echo $ex->getMessage();
         }

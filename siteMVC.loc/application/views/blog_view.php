@@ -6,6 +6,7 @@ if ($data) {
             <a href="/blog/post?<?= $dat->url; ?>">
                 <h1><?= $dat->title; ?></h1></a>
             <p><?= $dat->content; ?></p>
+            <p><?= $dat->name; ?></p>
         </div>
 		<?php
 	}
