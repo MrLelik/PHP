@@ -55,7 +55,7 @@
 				<?php endif; ?>
 				<?php if (!isset($_SESSION['access']) || !$_SESSION['access']): ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.php">Log in</a>
+                        <a class="nav-link" href="/Main/login">Log in</a>
                     </li>
 				<?php endif; ?>
 				<?php if (isset($_SESSION['access']) && $_SESSION['access']): ?>

@@ -59,4 +59,28 @@ class ControllerMain extends Controller
 	{
 		$this->view->generate('contact_view.php');
 	}
+
+	public function loginAction()
+	{
+		$this->view->generate('login_view.php');
+	}
+
+	/**
+	 * not data
+	 * @Do array check POST and validateFormRegister
+	 */
+	public function registerAction()
+	{
+		if (isset($_POST) && !empty($_POST)) {
+			if ($this->model->validateFormRegister($_POST)) {
+				$this->model->trueRegister();
+			}
+		} else {
+			$this->model->cleanError();
+		}
+
+		$data = $this->model->getErrorMessage();
+
+		$this->view->generate('register_view.php', $data);
+	}
 }
