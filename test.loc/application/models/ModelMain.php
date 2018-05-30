@@ -121,6 +121,66 @@ class ModelMain extends Model
 	 *
 	 * @return bool
 	 *
+	 * @Do get User and checking password. If success
+	 */
+	public function userLogIn($data)
+	{
+		$userObj = $this->getUser($data['login']);
+
+		if ($userObj) {
+			if ($data['pass'] == $userObj->password) {
+
+				$this->cleanError();
+
+				$_SESSION['access'] = true;
+				$_SESSION['role'] = $userObj->role;
+				$_SESSION['login'] = $userObj->login;
+
+				return $userObj;
+			} else {
+				$_SESSION['error_message'] = 'Wrong password';
+				$_SESSION['access'] = false;
+
+				return false;
+			}
+		} else {
+			$_SESSION['error_message'] = 'Login not found';
+
+			$_SESSION['access'] = false;
+
+			return false;
+		}
+	}
+
+	/**
+	 * @param $data
+	 *
+	 * @return bool
+	 *
+	 * @Do data checking and call method userLogIn
+	 */
+	public function validateFormLogin($data)
+	{
+		if ( ! isset($data['login']) || empty($data['login'])) {
+			$_SESSION['error_message'] = 'Login can not by empty';
+
+			return false;
+		}
+
+		if ( ! isset($data['pass']) || empty($data['pass'])) {
+			$_SESSION['error_message'] = 'Password can not by empty';
+
+			return false;
+		}
+
+		return $this->userLogIn($this->clean($data));
+	}
+
+	/**
+	 * @param $data
+	 *
+	 * @return bool
+	 *
 	 * @Do data checking and call method addUser
 	 */
 	public function validateFormRegister($data)

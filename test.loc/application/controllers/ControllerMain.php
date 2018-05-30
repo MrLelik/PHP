@@ -62,12 +62,23 @@ class ControllerMain extends Controller
 
 	public function loginAction()
 	{
-		$this->view->generate('login_view.php');
+		if (isset($_POST) && !empty($_POST)) {
+			if ($this->model->validateFormLogin($_POST)) {
+				header('Location: /');
+			}
+		} else {
+			$this->model->cleanError();
+		}
+
+		$data = $this->model->getErrorMessage();
+
+		$this->view->generate('login_view.php', $data);
 	}
 
 	/**
 	 * not data
-	 * @Do array check POST and validateFormRegister
+	 *
+	 * @Do check POST and validateFormRegister
 	 */
 	public function registerAction()
 	{

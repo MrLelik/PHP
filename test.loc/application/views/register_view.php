@@ -17,10 +17,7 @@
 	<div class="row">
 		<div class="col-md-6 mx-auto">
 			<?php if ($data): ?>
-                <?php if ($data[0] === 'Registration is successful')?>
 				<p style="color: green"><?= $data; ?></p>
-                <?php else: ?>
-                <p style="color: red"><?= $data; ?></p>
 			<?php endif; ?>
 			<form class="form-horizontal" role="form" method="post">
 				<div class="form-group">
