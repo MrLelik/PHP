@@ -26,7 +26,7 @@
 								</div>
 							</div>
 						</a>
-						<a class="btn btn-info" href="changeSampleArticle.php?changeUrl=<?= $dat->url;?>">Change</a>
+						<a class="btn btn-info" href="/admin/changeone?<?= $dat->url; ?>">Change</a>
 					<?php endforeach; ?>
 				<?php else: ?>
 					<p>Articles not found!</p>

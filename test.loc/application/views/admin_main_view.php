@@ -16,7 +16,7 @@
 				<?php if ($data): ?>
 					<?php foreach ($data as $dat): ?>
 						<a class="list-group-item list-group-item-action"
-						   href="changeSampleArticle.php?changeUrl=<?= $dat->url; ?>">
+						   href="/admin/changeone?<?= $dat->url; ?>">
 							<div class="media">
 								<div class="media-body">
 									<h4>

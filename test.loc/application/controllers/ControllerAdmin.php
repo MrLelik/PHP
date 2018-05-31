@@ -57,4 +57,10 @@ class ControllerAdmin extends Controller
 		$data = $this->model->getAllUsers();
 		$this->view->generate('admin_role_view.php', $data);
 	}
+
+	public function changeoneAction($myKey)
+	{
+		$data = $this->model->getContentOneNews($myKey);
+		$this->view->generate('admin_one_change.php', $data);
+	}
 }
