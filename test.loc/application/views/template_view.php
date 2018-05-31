@@ -40,27 +40,27 @@
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Main/about">About</a>
+                    <a class="nav-link" href="/main/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Main/one">Sample Post</a>
+                    <a class="nav-link" href="/main/one">Sample Post</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Main/contact">Contact</a>
+                    <a class="nav-link" href="/main/contact">Contact</a>
                 </li>
 				<?php if (isset($_SESSION['access']) && $_SESSION['access'] && $_SESSION['role'] == 'admin'): ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="admin/main.php">Admin Panel</a>
+                        <a class="nav-link" href="/admin/index">Admin Panel</a>
                     </li>
 				<?php endif; ?>
 				<?php if (!isset($_SESSION['access']) || !$_SESSION['access']): ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Main/login">Log in</a>
+                        <a class="nav-link" href="/main/login">Log in</a>
                     </li>
 				<?php endif; ?>
 				<?php if (isset($_SESSION['access']) && $_SESSION['access']): ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="/?logout">Exit</a>
+                        <a class="nav-link" href="/main/logout">Exit</a>
                     </li>
 				<?php endif; ?>
             </ul>

@@ -22,11 +22,13 @@ class Route
         // получаем имя контроллера
         if (!empty($routes[1])) {
             $controllerName = $routes[1];
+//	        var_dump($controllerName);
         }
 
         // получаем имя экшена
         if (!empty($routes[2])) {
             $actionName = $routes[2];
+//	        var_dump($actionName);
         }
 
         // добавляем префиксы

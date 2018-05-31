@@ -11,15 +11,7 @@ class ControllerMain extends Controller
 		parent::__construct();
 	}
 
-	/**
-	 * data -> All Articles
-	 * view Home
-	 */
-	public function indexAction()
-	{
-		$data = $this->model->getPosts();
-		$this->view->generate('main_view.php', $data);
-	}
+
 
 	/**
 	 * @param $myKey
@@ -93,5 +85,14 @@ class ControllerMain extends Controller
 		$data = $this->model->getErrorMessage();
 
 		$this->view->generate('register_view.php', $data);
+	}
+
+	/**
+	 * @Do log out User and destroy session
+	 */
+	public function logoutAction()
+	{
+		session_destroy();
+		header('Location: /main/login');
 	}
 }

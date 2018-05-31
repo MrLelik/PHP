@@ -10,9 +10,13 @@ class Controller
         $this->view = new View();
     }
 
-    // действие (action), вызываемое по умолчанию
-    function action_index()
-    {
-        // todo
-    }
+	/**
+	 * data -> All Articles
+	 * view Home
+	 */
+	public function indexAction()
+	{
+		$data = $this->model->getPosts();
+		$this->view->generate('main_view.php', $data);
+	}
 }
