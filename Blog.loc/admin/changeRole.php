@@ -74,7 +74,6 @@ if (isset($_GET['changeID']) && !empty($_GET['changeID'])) {
         </div>
     </div>
 </div>
-</div>
 
 <!-- /.container-fluid-->
 <!-- /.content-wrapper-->

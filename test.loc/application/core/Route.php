@@ -15,9 +15,11 @@ class Route
         $actionName = 'index';
 
         $toExplode = explode('?', $_SERVER['REQUEST_URI']);
-//	    var_dump($_SERVER['REQUEST_URI']);
+//	    var_dump($toExplode);
         $routes = explode('/', $toExplode[0]);
         $params = isset($toExplode[1]) ? $toExplode[1] : null;
+
+	    $flag = isset($toExplode[2]) ? $toExplode[2] : null;
 
         // получаем имя контроллера
         if (!empty($routes[1])) {
@@ -71,11 +73,14 @@ class Route
 
         if (method_exists($controller, $action)) {
             // вызываем действие контроллера
-            if (null != $params) {
-                $controller->$action($params);
-            } else {
-                $controller->$action();
-            }
+	        if (null != $params && null != $flag) {
+		        $controller->$action($params, $flag);
+	        } elseif (null != $params) {
+		        $controller->$action($params);
+	        } else {
+		        $controller->$action();
+	        }
+
 
         } else {
             // здесь также разумнее было бы кинуть исключение

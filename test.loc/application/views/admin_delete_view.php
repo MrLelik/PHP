@@ -27,7 +27,7 @@
 								</div>
 							</div>
 						</a>
-						<a class="btn btn-warning" href="deleteArticle.php?deleteUrl=<?= $dat->url; ?>">Delete</a>
+						<a class="btn btn-warning" href="/admin/delete?<?= $dat->url; ?>">Delete</a>
 					<?php endforeach; ?>
 				<?php else: ?>
 					<p>Articles not found!</p>

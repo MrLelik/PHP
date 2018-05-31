@@ -54,7 +54,7 @@
 				</a>
 			</li>
 			<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-				<a class="nav-link" href="changeRole.php">
+				<a class="nav-link" href="/admin/role">
 					<i class="fa fa-users"></i>
 					<span class="nav-link-text">Change Role Users</span>
 				</a>

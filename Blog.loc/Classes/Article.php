@@ -47,7 +47,7 @@ class Article
 		if ($this->connect) {
 			$sql = "SELECT * FROM articles WHERE url='$str'";
 
-			return $this->connect->query($sql)->fetch(PDO::FETCH_OBJ);
+			return $this->connect->query($sql)->fetch(PDO::FETCH_ASSOC);
 		}
 		return false;
 	}

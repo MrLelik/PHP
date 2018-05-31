@@ -22,30 +22,6 @@ class ModelMain extends Model
 		return $data;
 	}
 
-	/**
-	 * @param $login
-	 *
-	 * @return bool
-	 *
-	 * @Do getting a user by login
-	 */
-	public function getUser($login)
-	{
-		try {
-			$sql = "SELECT * FROM users WHERE login = :login";
-
-			$stmt = $this->connect()->prepare($sql);
-
-			$stmt->bindParam(':login', $login, PDO::PARAM_STR);
-			$stmt->execute();
-
-			return $stmt->fetch(PDO::FETCH_OBJ);
-		} catch (Exception $ex) {
-			echo $ex->getMessage();
-		}
-
-		return false;
-	}
 
 	/**
 	 * @param $data

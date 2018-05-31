@@ -2,7 +2,7 @@
 	<div class="container-fluid">
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item">
-				<a class="nav-link" href="addArticle.php">
+				<a class="nav-link" href="/admin/add">
 					<i class="fa fa-plus-square-o"></i> Add Articles</a>
 			</li>
 		</ol>
