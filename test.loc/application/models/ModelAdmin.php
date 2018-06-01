@@ -2,6 +2,13 @@
 
 class ModelAdmin extends Model
 {
+	/**
+	 * @param $table
+	 *
+	 * @return mixed|null
+	 *
+	 * @Do get count table
+	 */
 	public function getCountTable($table)
 	{
 		$count = null;
@@ -16,6 +23,11 @@ class ModelAdmin extends Model
 		return $count;
 	}
 
+	/**
+	 * @return array|null
+	 *
+	 * @Do get All Users
+	 */
 	public function getAllUsers()
 	{
 		$data = null;
@@ -30,6 +42,11 @@ class ModelAdmin extends Model
 		return $data;
 	}
 
+	/**
+	 * @param $data
+	 *
+	 * @Do add one Article in DB
+	 */
 	public function addArticle($data)
 	{
 		$title = ($data['title']) ? $data['title'] : null;
@@ -54,6 +71,13 @@ class ModelAdmin extends Model
 
 	}
 
+	/**
+	 * @param $str
+	 *
+	 * @return mixed|string
+	 *
+	 * @Do forms the Url
+	 */
 	public function getUrl($str)
 	{
 		$articleUrl = str_replace(' ', '-', $str);
@@ -75,6 +99,13 @@ class ModelAdmin extends Model
 		}
 	}
 
+	/**
+	 * @param $str
+	 *
+	 * @return bool|mixed
+	 *
+	 * @Do get Article by Url
+	 */
 	public function getArticleByUrl($str)
 	{
 		try {
@@ -106,6 +137,13 @@ class ModelAdmin extends Model
 		return false;
 	}
 
+	/**
+	 * @param $id
+	 *
+	 * @param $role
+	 *
+	 * @Do change role User
+	 */
 	public function changeRole($id, $role)
 	{
 		try {
@@ -121,6 +159,13 @@ class ModelAdmin extends Model
 
 	}
 
+	/**
+	 * @param $data
+	 *
+	 * @param $url
+	 *
+	 * @Do update Article and Image
+	 */
 	public function updateArticle($data, $url)
 	{
 		$filePath = null;
