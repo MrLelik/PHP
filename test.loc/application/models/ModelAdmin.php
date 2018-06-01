@@ -121,6 +121,29 @@ class ModelAdmin extends Model
 
 	}
 
+	public function updateArticle($date, $url)
+	{
+		$title = ($date['title']) ? $date['title'] : null;
+		$subTitle = ($date['subtitle']) ? $date['subtitle'] : null;
+		$content = ($date['content']) ? $date['content'] : null;
+		$date = date('F d, Y');
+
+
+		try {
+			$sql = "UPDATE articles SET title = :title, sub_title = :sub_title, content = :content, created_at = :created_at WHERE articles . url = :url";
+			$stmt = $this->connect()->prepare($sql);
+			$stmt->bindParam(':title', $title, PDO::PARAM_STR);
+			$stmt->bindParam(':sub_title', $subTitle, PDO::PARAM_STR);
+			$stmt->bindParam(':content', $content, PDO::PARAM_STR);
+			$stmt->bindParam(':created_at', $date, PDO::PARAM_STR);
+			$stmt->bindParam(':url', $url, PDO::PARAM_STR);
+			$stmt->execute();
+		} catch (Exception $ex) {
+			echo $ex->getMessage();
+		}
+
+	}
+
 	/**
 	 * @param $str
 	 *

@@ -60,6 +60,11 @@ class ControllerAdmin extends Controller
 
 	public function changeoneAction($myKey)
 	{
+		if (isset($_POST) && !empty($_POST) && !empty($myKey)) {
+			$this->model->updateArticle($_POST, $myKey);
+			header('Location: /admin/changeone?' . $myKey);
+		}
+
 		$data = $this->model->getContentOneNews($myKey);
 		$this->view->generate('admin_one_change.php', $data);
 	}
