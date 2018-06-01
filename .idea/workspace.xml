@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e3c5629-4329-4c87-8b00-1a435bf887dc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.loc/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/test.loc/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.loc/application/controllers/ControllerAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.loc/application/controllers/ControllerAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.loc/application/core/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.loc/application/core/Model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.loc/application/models/ModelAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.loc/application/models/ModelAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.loc/application/views/admin_one_change.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.loc/application/views/admin_one_change.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,7 +71,7 @@
       <file leaf-file-name="ModelMain.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.loc/application/models/ModelMain.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="598">
               <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
@@ -76,17 +80,17 @@
       <file leaf-file-name="Model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.loc/application/core/Model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2548">
-              <caret line="98" column="5" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+            <state relative-caret-position="262">
+              <caret line="106" column="49" lean-forward="true" selection-start-line="106" selection-start-column="49" selection-end-line="106" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ModelAdmin.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ModelAdmin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.loc/application/models/ModelAdmin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="123" column="33" lean-forward="true" selection-start-line="123" selection-start-column="20" selection-end-line="123" selection-end-column="33" />
+            <state relative-caret-position="236">
+              <caret line="128" column="43" selection-start-line="128" selection-start-column="43" selection-end-line="128" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -94,17 +98,17 @@
       <file leaf-file-name="ControllerAdmin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.loc/application/controllers/ControllerAdmin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
+            <state relative-caret-position="562">
+              <caret line="81" column="9" lean-forward="true" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin_one_change.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="admin_one_change.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.loc/application/views/admin_one_change.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
+            <state relative-caret-position="728">
+              <caret line="28" column="72" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -157,7 +161,6 @@
         <option value="$PROJECT_DIR$/siteMVC.loc/application/models/ModelBlog.php" />
         <option value="$PROJECT_DIR$/siteMVC.loc/application/views/blog_view.php" />
         <option value="$PROJECT_DIR$/siteMVC.loc/application/controllers/ControllerBlog.php" />
-        <option value="$PROJECT_DIR$/test.loc/.gitignore" />
         <option value="$PROJECT_DIR$/test.loc/index.php" />
         <option value="$PROJECT_DIR$/test.loc/application/bootstrap.php" />
         <option value="$PROJECT_DIR$/test.loc/application/views/single_view.php" />
@@ -175,18 +178,19 @@
         <option value="$PROJECT_DIR$/test.loc/application/views/admin_add_view.php" />
         <option value="$PROJECT_DIR$/Blog.loc/admin/changeRole.php" />
         <option value="$PROJECT_DIR$/test.loc/application/models/ModelMain.php" />
-        <option value="$PROJECT_DIR$/test.loc/application/core/Model.php" />
         <option value="$PROJECT_DIR$/db.loc/index.php" />
         <option value="$PROJECT_DIR$/Blog.loc/Classes/Article.php" />
         <option value="$PROJECT_DIR$/test.loc/application/views/admin_delete_view.php" />
         <option value="$PROJECT_DIR$/test.loc/application/views/admin_role_view.php" />
         <option value="$PROJECT_DIR$/test.loc/application/core/Route.php" />
         <option value="$PROJECT_DIR$/test.loc/application/views/admin_change_view.php" />
-        <option value="$PROJECT_DIR$/test.loc/application/views/admin_one_change.php" />
         <option value="$PROJECT_DIR$/test.loc/application/views/admin_main_view.php" />
         <option value="$PROJECT_DIR$/test.loc/application/views/admin_template_view.php" />
-        <option value="$PROJECT_DIR$/test.loc/application/models/ModelAdmin.php" />
+        <option value="$PROJECT_DIR$/test.loc/.gitignore" />
+        <option value="$PROJECT_DIR$/test.loc/application/views/admin_one_change.php" />
         <option value="$PROJECT_DIR$/test.loc/application/controllers/ControllerAdmin.php" />
+        <option value="$PROJECT_DIR$/test.loc/application/core/Model.php" />
+        <option value="$PROJECT_DIR$/test.loc/application/models/ModelAdmin.php" />
       </list>
     </option>
   </component>
@@ -210,6 +214,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -271,7 +276,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -436,11 +440,12 @@
       <workItem from="1527801079123" duration="1734000" />
       <workItem from="1527805395301" duration="5441000" />
       <workItem from="1527811029051" duration="592000" />
+      <workItem from="1527847827317" duration="9428000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="505399000" />
+    <option name="totallyTimeSpent" value="514827000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -455,7 +460,7 @@
     <frame x="-1" y="26" width="1922" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4950386" visible="true" weight="0.17110874" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4950386" visible="true" weight="0.17270789" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -510,13 +515,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/siteMVC.loc/application/models/ModelBlog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="114" selection-end-line="27" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/siteMVC.loc/application/controllers/ControllerBlog.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="832">
@@ -743,15 +741,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.loc/application/models/ModelMain.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="598">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.loc/application/core/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2548">
-          <caret line="98" column="5" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -832,20 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.loc/application/views/admin_main_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="18" column="67" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.loc/application/views/admin_one_change.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Blog.loc/Classes/Article.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -853,17 +830,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test.loc/application/views/admin_main_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="18" column="67" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.loc/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.loc/application/controllers/ControllerAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
+        <state relative-caret-position="562">
+          <caret line="81" column="9" lean-forward="true" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.loc/application/core/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="106" column="49" lean-forward="true" selection-start-line="106" selection-start-column="49" selection-end-line="106" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.loc/application/models/ModelAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="123" column="33" lean-forward="true" selection-start-line="123" selection-start-column="20" selection-end-line="123" selection-end-column="33" />
+        <state relative-caret-position="236">
+          <caret line="128" column="43" selection-start-line="128" selection-start-column="43" selection-end-line="128" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.loc/application/views/admin_one_change.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="28" column="72" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
         </state>
       </provider>
     </entry>

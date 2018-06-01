@@ -21,6 +21,9 @@ class ControllerAdmin extends Controller
 		$this->view->generate('admin_main_view.php', $data);
 	}
 
+	/**
+	 * @Do Add Article
+	 */
 	public function addAction()
 	{
 		if (isset($_POST) && !empty($_POST)) {
@@ -30,12 +33,18 @@ class ControllerAdmin extends Controller
 		$this->view->generate('admin_add_view.php');
 	}
 
+	/**
+	 * @Do All Articles with the button change
+	 */
 	public function changeAction()
 	{
 		$data = $this->model->getPosts();
 		$this->view->generate('admin_change_view.php', $data);
 	}
 
+	/**
+	 * @param null $myKey
+	 */
 	public function deleteAction($myKey = null)
 	{
 		if (!empty($myKey)) {
@@ -47,6 +56,10 @@ class ControllerAdmin extends Controller
 		$this->view->generate('admin_delete_view.php', $data);
 	}
 
+	/**
+	 * @param null $myKey
+	 * @param null $flag
+	 */
 	public function roleAction($myKey = null, $flag = null)
 	{
 		if (!empty($myKey) && !empty($flag)) {
@@ -58,11 +71,14 @@ class ControllerAdmin extends Controller
 		$this->view->generate('admin_role_view.php', $data);
 	}
 
+	/**
+	 * @param $myKey
+	 */
 	public function changeoneAction($myKey)
 	{
 		if (isset($_POST) && !empty($_POST) && !empty($myKey)) {
 			$this->model->updateArticle($_POST, $myKey);
-			header('Location: /admin/changeone?' . $myKey);
+//			header('Location: /admin/changeone?' . $myKey);
 		}
 
 		$data = $this->model->getContentOneNews($myKey);

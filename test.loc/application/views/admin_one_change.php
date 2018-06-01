@@ -7,8 +7,12 @@
 			</li>
 		</ol>
 
+		<?php if ($data->image): ?>
+            <img width="200" src="<?= $data->image ?>" >
+		<?php endif; ?>
+
 		<?php if ($data): ?>
-			<form role="form" method="post">
+			<form role="form" method="post" enctype="multipart/form-data">
 				<div class="form-group">
 					<label>Title</label>
 					<input type="text" class="form-control"
@@ -24,7 +28,12 @@
 					<textarea class="form-control" rows="10"
 					          placeholder="Content" name="content"><?= $data->content; ?></textarea>
 				</div>
-				<button type="submit" name="changeArticle" class="btn btn-success">Change</button>
+                <div class="form-group">
+                    <label for="exampleInputFile">File input</label>
+                    <input type="file" id="exampleInputFile" name="image">
+<!--                    <p class="help-block">Example block-level help text here.</p>-->
+                </div>
+				<button type="submit" class="btn btn-success">Change</button>
 			</form>
 		<?php else: ?>
 			<p>Article not found</p>

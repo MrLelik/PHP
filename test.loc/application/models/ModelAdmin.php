@@ -30,13 +30,13 @@ class ModelAdmin extends Model
 		return $data;
 	}
 
-	public function addArticle($date)
+	public function addArticle($data)
 	{
-		$title = ($date['title']) ? $date['title'] : null;
-		$subTitle = ($date['subtitle']) ? $date['subtitle'] : null;
-		$content = ($date['content']) ? $date['content'] : null;
-		$date = date('F d, Y');
-		$url = $this->getUrl($date['title']);
+		$title = ($data['title']) ? $data['title'] : null;
+		$subTitle = ($data['subtitle']) ? $data['subtitle'] : null;
+		$content = ($data['content']) ? $data['content'] : null;
+		$data = date('F d, Y');
+		$url = $this->getUrl($data['title']);
 		$author = $this->getUser($_SESSION['login']);
 		$author = $author->id;
 
@@ -46,7 +46,7 @@ class ModelAdmin extends Model
 			$stmt->bindParam(':title', $title, PDO::PARAM_STR);
 			$stmt->bindParam(':sub_title', $subTitle, PDO::PARAM_STR);
 			$stmt->bindParam(':content', $content, PDO::PARAM_STR);
-			$stmt->bindParam(':created_at', $date, PDO::PARAM_STR);
+			$stmt->bindParam(':created_at', $data, PDO::PARAM_STR);
 			$stmt->bindParam(':author', $author, PDO::PARAM_STR);
 			$stmt->bindParam(':url', $url, PDO::PARAM_STR);
 			$result = $stmt->execute();
@@ -121,21 +121,36 @@ class ModelAdmin extends Model
 
 	}
 
-	public function updateArticle($date, $url)
+	public function updateArticle($data, $url)
 	{
-		$title = ($date['title']) ? $date['title'] : null;
-		$subTitle = ($date['subtitle']) ? $date['subtitle'] : null;
-		$content = ($date['content']) ? $date['content'] : null;
-		$date = date('F d, Y');
+		$filePath = null;
 
+		if (isset($_FILES)) {
+			$filePath = $this->saveImage();
+		}
+
+		if ($filePath != null) {
+			$article = $this->getContentOneNews($url);
+			if ($article->image) {
+				unlink(__DIR__ . '/../../' . $article['image']);
+			}
+		}
+
+		$title = ($data['title']) ? $data['title'] : null;
+		$subTitle = ($data['subtitle']) ? $data['subtitle'] : null;
+		$content = ($data['content']) ? $data['content'] : null;
+		$data = date('F d, Y');
 
 		try {
-			$sql = "UPDATE articles SET title = :title, sub_title = :sub_title, content = :content, created_at = :created_at WHERE articles . url = :url";
+			$sql = "UPDATE articles 
+					SET title = :title, sub_title = :sub_title, content = :content, created_at = :created_at, image = :image 
+					WHERE articles . url = :url";
 			$stmt = $this->connect()->prepare($sql);
 			$stmt->bindParam(':title', $title, PDO::PARAM_STR);
 			$stmt->bindParam(':sub_title', $subTitle, PDO::PARAM_STR);
 			$stmt->bindParam(':content', $content, PDO::PARAM_STR);
-			$stmt->bindParam(':created_at', $date, PDO::PARAM_STR);
+			$stmt->bindParam(':created_at', $data, PDO::PARAM_STR);
+			$stmt->bindParam(':image', $filePath, PDO::PARAM_STR);
 			$stmt->bindParam(':url', $url, PDO::PARAM_STR);
 			$stmt->execute();
 		} catch (Exception $ex) {
