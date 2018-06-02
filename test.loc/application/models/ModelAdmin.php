@@ -53,7 +53,7 @@ class ModelAdmin extends Model
 		$subTitle = ($data['subtitle']) ? $data['subtitle'] : null;
 		$content = ($data['content']) ? $data['content'] : null;
 		$data = date('F d, Y');
-		$url = $this->getUrl($data['title']);
+		$url = ($this->getUrl($data['title'])) ? $this->getUrl($data['title']) : null;
 		$author = $this->getUser($_SESSION['login']);
 		$author = $author->id;
 

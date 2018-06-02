@@ -98,6 +98,11 @@ class Model
 		return false;
 	}
 
+	/**
+	 * @return bool|string
+	 *
+	 * @Do save Image
+	 */
 	public function saveImage()
 	{
 		if (!isset($_FILES)) {

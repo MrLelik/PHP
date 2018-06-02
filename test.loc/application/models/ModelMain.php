@@ -22,7 +22,6 @@ class ModelMain extends Model
 		return $data;
 	}
 
-
 	/**
 	 * @param $data
 	 *
@@ -197,6 +196,9 @@ class ModelMain extends Model
 		$_SESSION['error_message'] = false;
 	}
 
+	/**
+	 * @Do
+	 */
 	public function trueRegister()
 	{
 		$_SESSION['error_message'] = 'Registration is successful';

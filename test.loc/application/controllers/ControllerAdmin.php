@@ -28,6 +28,7 @@ class ControllerAdmin extends Controller
 	{
 		if (isset($_POST) && !empty($_POST)) {
 			$this->model->addArticle($_POST);
+			var_dump($_POST);
 			header('Location: /admin/index');
 		}
 		$this->view->generate('admin_add_view.php');
