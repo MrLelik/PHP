@@ -203,4 +203,27 @@ class ModelMain extends Model
 	{
 		$_SESSION['error_message'] = 'Registration is successful';
 	}
+
+    public function search($post)
+    {
+        $data = null;
+        $words = $post['words'] ?? null;
+        try {
+            $sql = "SELECT * 
+                    FROM articles 
+                    INNER JOIN users 
+                    ON articles.author = users.id 
+                    WHERE CONCAT (title , sub_title , content) 
+                    LIKE :words";
+            $stmt = $this->connect()->prepare($sql);
+            $stmt->bindValue(':words', '%'.$words.'%', PDO::PARAM_STR);
+            $stmt->execute();
+
+            $data = $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch (Exception $ex) {
+            echo $ex->getMessage();
+        }
+
+        return $data;
+    }
 }

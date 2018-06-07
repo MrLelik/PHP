@@ -9,7 +9,7 @@
 
 		<div class="card mb-3">
 			<div class="card-header">
-				<i class="fa fa-newspaper-o"></i> <?= random_int(1, 10); ?>
+				<i class="fa fa-newspaper-o"></i> <?= Model::getCountTable('articles'); ?>
 				Articles
 			</div>
 			<div class="list-group list-group-flush small">

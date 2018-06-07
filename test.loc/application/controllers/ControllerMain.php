@@ -95,4 +95,13 @@ class ControllerMain extends Controller
 		session_destroy();
 		header('Location: /main/login');
 	}
+
+    public function searchAction()
+    {
+        if (isset($_POST) && !empty($_POST)) {
+            $data = $this->model->search($_POST);
+        }
+
+        $this->view->generate('search_view.php', $data);
+    }
 }

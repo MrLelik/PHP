@@ -35,56 +35,8 @@ if (isset($_POST['go']) && !empty($_POST['words'])) {
 
     <!-- Custom styles for this template -->
     <link href="css/clean-blog.css" rel="stylesheet">
-
-    <style>
-        #search-block-form{
-            width:248px;
-            height:28px;
-            border-radius:15px;
-            border: #c4c3cf solid 1px;
-            /*background:url(images/searchBg.png) left top repeat-x;*/
-        }
-        .focus-active{
-            border-color:#aaa !important;
-            background:#fff !important;
-        }
-        #search-block-form input{
-            padding:0;
-            margin:0;
-            display:block;
-            border:none;
-            outline:none;
-            background:none;
-            width:100%;
-            height:100%;
-        }
-        #search-block-form .form-actions{
-            width:28px;
-            height:28px;
-            float:right;
-            background:url(images/searchIcon.png) 5px 2px no-repeat;
-        }
-        #search-block-form .form-actions input:hover{
-            cursor:pointer;
-        }
-        #search-block-form .form-actions input{
-            overflow:hidden;
-            text-indent:-9999px;
-        }
-        #search-block-form .form-item{
-            width:210px;
-            padding:0px 5px;
-            float:right;
-            height:28px;
-        }
-        #search-block-form .form-item input{
-            font:13px/16px "Trebuchet MS", Arial, Helvetica, sans-serif;
-            color: #ececf6;
-            height:auto !important;
-            padding:6px 0;
-        }
-        .placeholder{color:#cbcbcb !important;}
-    </style>
+    <!-- Стиль строки поиска -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/search.css" type="text/css">
 </head>
 
 <body>

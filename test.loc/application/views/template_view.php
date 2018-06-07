@@ -19,6 +19,10 @@
           rel='stylesheet' type='text/css'>
     <!-- Custom styles for this template -->
     <link href="/css/clean-blog.css" rel="stylesheet">
+    <!-- Стиль строки поиска -->
+    <link rel="stylesheet" href="/vendor/bootstrap/css/search.css"
+          type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -66,6 +70,15 @@
             </ul>
         </div>
     </div>
+    <form action="/main/search" method="post" id="search-block-form">
+        <div class="form-item">
+            <input type="text" name="words" value="" maxlength="128" placeholder="Найти...">
+        </div>
+        <div class="form-actions">
+<!--            <input type="submit" value="Поиск" class="form-submit" href="/main/search">-->
+<!--            <a class="form-submit" href="javaScript:void(0)" submit="clickMe()"></a>-->
+        </div>
+    </form>
 </nav>
 
 	        <?php include 'application/views/' . $content_view; ?>
@@ -116,6 +129,19 @@
 <!-- Custom scripts for this template -->
 <script src="/js/clean-blog.js"></script>
 
-</body>
+<!--<script>-->
+<!--    function clickMe() {-->
+<!--        $.ajax({-->
+<!--            // method: "POST",-->
+<!--            // url: "/blog/ajax",-->
+<!--            // data: { urlImage: urlImage }-->
+<!--            console.log('hello');-->
+<!--        })-->
+<!--            .done(function( msg ) {-->
+<!--                console.log( "Data Saved: " + msg );-->
+<!--            });-->
+<!--    }-->
+<!--</script>-->
 
+</body>
 </html>

@@ -4,7 +4,7 @@
 
 		<div class="card mb-3">
 			<div class="card-header">
-				<i class="fa fa-users"></i> <?= random_int(1, 10); ?> Users
+				<i class="fa fa-users"></i> <?= Model::getCountTable('users'); ?> Users
 			</div>
 			<div class="card-body">
 				<div class="table-responsive">

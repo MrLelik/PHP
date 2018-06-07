@@ -64,7 +64,11 @@ class Model
 		$data = null;
 		try {
 			$data = $this->connect()
-			             ->query("SELECT * FROM articles INNER JOIN users ON articles.author = users.id WHERE url='$url'")
+			             ->query("SELECT * 
+                                            FROM articles 
+                                            INNER JOIN users 
+                                            ON articles.author = users.id 
+                                            WHERE url='$url'")
 			             ->fetch(PDO::FETCH_OBJ);
 		} catch (Exception $ex) {
 			echo $ex->getMessage();
@@ -131,4 +135,24 @@ class Model
 			}
 		}
 	}
+
+    /**
+     * @param $table
+     *
+     * @return mixed|null
+     *
+     * @Do get count table
+     */
+    public static function getCountTable($table)
+    {
+        try {
+            $sql = "SELECT COUNT(*) as count FROM $table";
+
+            return static::connect()->query($sql)->fetchColumn();
+        } catch (Exception $ex) {
+            echo $ex->getMessage();
+        }
+
+        return false;
+    }
 }

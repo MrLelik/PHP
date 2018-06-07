@@ -79,7 +79,7 @@ class ControllerAdmin extends Controller
 	{
 		if (isset($_POST) && !empty($_POST) && !empty($myKey)) {
 			$this->model->updateArticle($_POST, $myKey);
-//			header('Location: /admin/changeone?' . $myKey);
+			header('Location: /admin/changeone?' . $myKey);
 		}
 
 		$data = $this->model->getContentOneNews($myKey);

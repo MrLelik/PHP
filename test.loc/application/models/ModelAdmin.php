@@ -3,27 +3,6 @@
 class ModelAdmin extends Model
 {
 	/**
-	 * @param $table
-	 *
-	 * @return mixed|null
-	 *
-	 * @Do get count table
-	 */
-	public function getCountTable($table)
-	{
-		$count = null;
-		try {
-			$count = $this->connect()
-			              ->query("SELECT COUNT(*) as count FROM $table")
-			              ->fetchColumn();
-		} catch (Exception $ex) {
-			echo $ex->getMessage();
-		}
-
-		return $count;
-	}
-
-	/**
 	 * @return array|null
 	 *
 	 * @Do get All Users
