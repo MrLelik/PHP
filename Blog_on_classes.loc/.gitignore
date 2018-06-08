@@ -2,6 +2,11 @@
 /vendor
 /mail
 /scss
-/admin/vendor
+/css
+/js
+/admin/vendor/
+/admin/css/
+/admin/js/
+/admin/scss/
 .idea
 .git
