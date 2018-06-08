@@ -18,7 +18,7 @@
 			<?php if ($data): ?>
 				<?php foreach ($data as $dat): ?>
                     <div class="post-preview">
-                        <a href="/Main/post?<?= $dat->url; ?>">
+                        <a href="/main/post?<?= $dat->url; ?>">
                             <h2 class="post-title">
 								<?= $dat->title; ?>
                             </h2>

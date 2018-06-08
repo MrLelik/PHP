@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello</title>
+    <title><?= Model::viewTitle(); ?></title>
     <!-- Bootstrap core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- Custom fonts for this template -->
@@ -75,8 +75,7 @@
             <input type="text" name="words" value="" maxlength="128" placeholder="Найти...">
         </div>
         <div class="form-actions">
-<!--            <input type="submit" value="Поиск" class="form-submit" href="/main/search">-->
-<!--            <a class="form-submit" href="javaScript:void(0)" submit="clickMe()"></a>-->
+<!--            <input type="submit" value="Поиск" class="form-submit"">-->
         </div>
     </form>
 </nav>
@@ -128,20 +127,5 @@
 
 <!-- Custom scripts for this template -->
 <script src="/js/clean-blog.js"></script>
-
-<!--<script>-->
-<!--    function clickMe() {-->
-<!--        $.ajax({-->
-<!--            // method: "POST",-->
-<!--            // url: "/blog/ajax",-->
-<!--            // data: { urlImage: urlImage }-->
-<!--            console.log('hello');-->
-<!--        })-->
-<!--            .done(function( msg ) {-->
-<!--                console.log( "Data Saved: " + msg );-->
-<!--            });-->
-<!--    }-->
-<!--</script>-->
-
 </body>
 </html>

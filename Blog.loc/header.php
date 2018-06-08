@@ -1,6 +1,6 @@
 <?php
 require_once 'function.php';
-
+viewTitle();
 if (isset($_GET) && key_exists('logout', $_GET)) {
     session_destroy();
     header('Location: /login.php');
@@ -23,7 +23,7 @@ if (isset($_POST['go']) && !empty($_POST['words'])) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php viewTitle();?></title>
+    <title><?php ;?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">

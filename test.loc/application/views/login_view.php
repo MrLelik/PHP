@@ -39,7 +39,8 @@
 				</div>
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-9">
-						<a href="/Main/register" class="text-success pull-right">New User Registration</a>
+						<a href="/main/register" class="text-success
+						pull-right">New User Registration</a>
 					</div>
 				</div>
 			</form>

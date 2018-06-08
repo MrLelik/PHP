@@ -24,7 +24,6 @@ class Route
         // получаем имя контроллера
         if (!empty($routes[1])) {
             $controllerName = $routes[1];
-//	        var_dump($controllerName);
         }
 
         // получаем имя экшена

@@ -155,4 +155,69 @@ class Model
 
         return false;
     }
+
+    public static function viewTitle()
+    {
+        $first = 'main';
+        $second = 'index';
+        $address = explode('/', $_SERVER['REQUEST_URI']);
+
+        if (!empty($address[1])) {
+            $first = $address[1] ?? ($address[1]);
+        }
+
+        if (!empty($address[2])) {
+            $second = $address[2] ?? ($address[2]);
+        }
+
+        if ($first == 'main') {
+            switch ($second) {
+                case 'index':
+                    echo 'Custom Blog';
+                    break;
+                case 'about':
+                    echo 'Custom Blog - About';
+                    break;
+                case 'one':
+                    echo 'Custom Blog - Post';
+                    break;
+                case 'contact':
+                    echo 'Custom Blog - Contact';
+                    break;
+                case 'login':
+                    echo 'Custom Blog - Login';
+                    break;
+                case 'register':
+                    echo 'Custom Blog - Registration';
+                    break;
+                case 'search':
+                    echo 'Custom Blog - Search';
+                    break;
+                default:
+                    echo 'Custom Blog - Post';
+                    break;
+            }
+        } else {
+            switch ($second) {
+                case 'index':
+                    echo 'Admin Blog';
+                    break;
+                case 'add':
+                    echo 'Admin Blog - Add Article';
+                    break;
+                case 'change':
+                    echo 'Admin Blog - Change Article';
+                    break;
+                case 'delete':
+                    echo 'Admin Blog - Delete Article';
+                    break;
+                case 'role':
+                    echo 'Admin Blog - Change Role Users';
+                    break;
+                default:
+                    echo 'Admin Blog - Change Article';
+                    break;
+            }
+        }
+    }
 }

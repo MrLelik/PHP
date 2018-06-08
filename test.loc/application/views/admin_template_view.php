@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>SB Admin - Start Bootstrap Template</title>
+	<title><?= Model::viewTitle(); ?></title>
 	<!-- Bootstrap core CSS-->
 	<link href="/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 	<!-- Custom fonts for this template-->
@@ -62,7 +62,7 @@
 		</ul>
 		<ul class="navbar-nav sidenav-toggler">
 			<li class="nav-item">
-				<a class="nav-link text-center" href="../index.php">
+				<a class="nav-link text-center" href="/">
 					<i class="fa fa-mail-reply"></i>
 				</a>
 			</li>
@@ -70,7 +70,7 @@
 
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item">
-				<a class="nav-link"  href="../index.php">
+				<a class="nav-link"  href="/">
 					<i class="fa fa-mail-reply"></i> Back To MyBlog</a>
 			</li>
 			<li class="nav-item">
