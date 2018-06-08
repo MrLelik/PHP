@@ -41,6 +41,12 @@
       <path value="$PROJECT_DIR$/projectSymfony.loc/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/projectSymfony.loc/vendor/psr/link" />
       <path value="$PROJECT_DIR$/projectSymfony.loc/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/projectSymfony.loc/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/projectSymfony.loc/vendor/zendframework/zend-code" />
+      <path value="$PROJECT_DIR$/projectSymfony.loc/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/projectSymfony.loc/vendor/ocramius/package-versions" />
+      <path value="$PROJECT_DIR$/projectSymfony.loc/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/projectSymfony.loc/vendor/doctrine/migrations" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7" />
