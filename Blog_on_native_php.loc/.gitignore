@@ -1,0 +1,13 @@
+/img
+/vendor
+/mail
+/scss
+/admin/vendor
+/js
+/css
+/admin/css/
+/admin/js/
+/admin/scss/
+/admin/vendor/
+.idea
+.git
