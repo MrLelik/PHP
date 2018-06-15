@@ -27,7 +27,7 @@ class ArticleController extends Controller
 
         $articles = $em->getRepository('AppBundle:Article')->findAll();
 
-        return $this->render('article/index.html.twig', array(
+        return $this->render('@Blog/CRUD/article_list.html.twig', array(
             'articles' => $articles,
         ));
     }
@@ -52,7 +52,7 @@ class ArticleController extends Controller
             return $this->redirectToRoute('article_show', array('id' => $article->getId()));
         }
 
-        return $this->render('article/new.html.twig', array(
+        return $this->render('@Blog/CRUD/new_blog_article.html.twig', array(
             'article' => $article,
             'form' => $form->createView(),
         ));
