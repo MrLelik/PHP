@@ -49,9 +49,11 @@
             <h5 class="card-header">Search</h5>
             <div class="card-body">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for...">
+                    {{ form_start(form) }}
+                    {{ form_row(form.search) }}
                     <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="button">Go!</button>
+                    {{ form_row(form.submit) }}
+                    {{ form_end(form) }}
                 </span>
                 </div>
             </div>

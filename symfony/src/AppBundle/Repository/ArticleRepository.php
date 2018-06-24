@@ -2,6 +2,10 @@
 
 namespace AppBundle\Repository;
 
+
+use AppBundle\Entity\Article;
+
+
 /**
  * ArticleRepository
  *
@@ -10,4 +14,18 @@ namespace AppBundle\Repository;
  */
 class ArticleRepository extends \Doctrine\ORM\EntityRepository
 {
+	/**
+	 * @param Article $article
+	 * @param         $searchString
+	 *
+	 * @return array
+	 */
+	public function getSearch($searchString)
+	{
+		return $this->createQueryBuilder('a')
+		            ->where('a.title LIKE :param')
+		            ->setParameter('param', '%' . $searchString . '%')
+		            ->getQuery()
+		            ->getResult();
+	}
 }

@@ -15,22 +15,62 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class ArticleController extends Controller
 {
-    /**
-     * Lists all article entities.
-     *
-     * @Route("/", name="article_index")
-     * @Method("GET")
-     */
-    public function indexAction()
+	/**
+	 * Lists all article entities.
+	 *
+	 * @Route("/", name="article_index")
+	 * @Method({"GET", "POST"})
+	 * @param Request $request
+	 *
+	 * @return \Symfony\Component\HttpFoundation\Response
+	 */
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
+	    $form = $this->createForm('AppBundle\Form\SearchType');
+
         $articles = $em->getRepository('AppBundle:Article')->findAll();
+
+	    $form->handleRequest($request);
+
+	    if ($form->isSubmitted() && $form->isValid()) {
+		    $search = $form->getData();
+
+	    	return $this->redirectToRoute('article_search', array('word' => $search['search']));
+	    }
 
         return $this->render('@Blog/CRUD/article_list.html.twig', array(
             'articles' => $articles,
+            'form' => $form->createView(),
         ));
     }
+
+
+	/**
+	 * Lists all article entities.
+	 *
+	 * @Route("/search/{word}", name="article_search")
+	 * @Method({"GET", "POST"})
+	 * @param null $word
+	 *
+	 * @return \Symfony\Component\HttpFoundation\Response
+	 */
+	public function searchAction($word = null)
+	{
+//		$em = $this->getDoctrine()->getManager();
+		$form = $this->createForm('AppBundle\Form\SearchType');
+		$repos = $this->getDoctrine()->getRepository('AppBundle:Article');
+
+//		$articles = $em->getRepository('AppBundle:Article')->findAll();
+
+		$articles = $repos->getSearch($word);
+
+		return $this->render('@Blog/CRUD/article_list.html.twig', array(
+			'articles' => $articles,
+			'form' => $form->createView(),
+		));
+	}
 
     /**
      * Creates a new article entity.
